@@ -1,0 +1,32 @@
+[
+    {
+        "bean_name": "Typica",
+        "bean_description": "Arabica Family, High quality, low coffee yield and difficult to ",
+        "bean_origin": ""
+    },
+    {
+
+    },
+    {
+        "bean_name": "Catura",
+        "bean_description": "Arabica Low Caffeine content, Low acidity, Aromatic"
+    },
+    {
+
+    },
+    {
+        "bean_name": "Kona",
+        "bean_description": "Arabica Low Caffeine content, Low acidity, Aromatic"
+    },
+    {
+
+    },
+    {
+        "bean_name": "Pacamara",
+        "bean_description": "Arabica Low Caffeine content, Low acidity, Aromatic"
+    },
+    {
+        "bean_name": "Villalobos",
+        "bean_description": "Arabica Low Caffeine content, Low acidity, Aromatic"
+    }
+]
