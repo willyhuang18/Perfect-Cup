@@ -1,5 +1,4 @@
 const router = require("express").Router();
-
 const { User, Coffee, Bean, Roast, Sweetener } = require("../../models");
 const withAuth = require("../../utils/auth");
 
@@ -17,7 +16,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async(req, res) => {
     User.findOne({
         where: {
-            id: req.params.id
+            user_id: req.params.id
         },
         include: [
             {
@@ -41,7 +40,7 @@ router.get("/:id", async(req, res) => {
 router.put("/:d", async(req, res) => {
     User.update(req.body, {
         where: {
-            id: req.params.user_id
+            user_id: req.params.id
         },
     }).then(userData => {
         if(!userData) {
