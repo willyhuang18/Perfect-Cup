@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const User = require('../models/user');
+const User = require('../models/User');
 const Coffee = require('../models/Coffee');
 const Roast = require('../models/Roast');
 const Bean = require('../models/Bean');
@@ -40,3 +40,5 @@ const seedDatabase = async () => {
         returningL: true,
     });
 }
+
+seedDatabase();
