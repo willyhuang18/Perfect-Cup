@@ -1,38 +1,39 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Roast extends Model {}
+class Coffee extends Model {}
 
-Roast.init(
+Coffee.init(
     {
-        roast_id: {
+        coffee_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
-        roast_name: {
-            type: DataTypes.STRING,
-            allownull: false,
-        },
-        roast_description: {
+        coffee_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        coffee_bean: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+        },
         coffee_roast: {
             type: DataTypes.INTEGER,
-            references: {
-                model: 'coffee',
-                key: 'coffee_roast',
-            },
+            primaryKey: true,
+        },
+        coffee_sweetener: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
         },
 
     },
     {
         sequelize,
         freezeTableName: true,
-        modelName: 'roast'
+        modelName: 'coffee',
     }
 );
 
-module.exports = Roast;
+module.exports = Coffee;
