@@ -13,7 +13,7 @@ Bean.belongsTo(Coffee, {
 });
 
 Roast.belongsTo(Coffee, {
-    foreignKey: 'cofee_roast'
+    foreignKey: 'coffee_roast'
 });
 
 Sweetener.belongsTo(Coffee, {
