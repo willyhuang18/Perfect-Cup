@@ -17,15 +17,24 @@ Coffee.init(
         },
         coffee_bean: {
             type: DataTypes.INTEGER,
-            primaryKey: true,
+            references: {       //added MT
+                model: 'bean',      //added MT
+                key: 'bean_id', //added MT
+            },
         },
         coffee_roast: {
             type: DataTypes.INTEGER,
-            primaryKey: true,
+            references: {
+                model: 'roast',
+                key: 'roast_id',
+            },
         },
         coffee_sweetener: {
             type: DataTypes.INTEGER,
-            primaryKey: true,
+            references: {
+                model: 'sweetener',
+                key: 'sweetener_id',
+            },
         },
 
     },

@@ -28,7 +28,7 @@ User.init(
                 isEmail: true,
             }
         },
-        password: {
+        user_password: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -39,11 +39,11 @@ User.init(
     {
         hooks: {
             beforeCreate: async (signUpUserData) => {
-                signUpUserData.password = await bcrypt.hash(signUpUserData, 10);
+                signUpUserData.password = await bcrypt.hash(signUpUserData.user_password, 10);
                 return signUpUserData;
             },
             beforeUpdate: async (updatedUserData) => {
-                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                updatedUserData.password = await bcrypt.hash(updatedUserData.user_password, 10);
                 return updatedUserData;
             },
         },
