@@ -18,11 +18,7 @@ Sweetener.init(
         sweetener_description: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        sweetener_origin: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+        }
     },
     {
         sequelize,
