@@ -95,7 +95,7 @@ a:hover .liquid{
 .home{
   min-height: 100vh;
   padding-top: 12rem;
-  background: url('./img/home-bg.jpg') no-repeat;
+  background: url('./img/bg.jpg') no-repeat;
   background-position: center;
   background-size: cover;
   
@@ -163,6 +163,6 @@ section{
 }
 
 .main{
-  background: url('./img/menu-bg.jpg') no-repeat;
+  background: url('./img/bg2.jpg') no-repeat;
   background-size: cover;
 }
