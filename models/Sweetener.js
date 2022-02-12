@@ -23,13 +23,6 @@ Sweetener.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        coffee_sweetener: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'coffee',
-                key: 'coffee_sweetener',
-            },
-        },
     },
     {
         sequelize,

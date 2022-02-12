@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Coffee, Bean, Roast, Sweetener } = require("../../models");
+const { Sweetener } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET all sweeteners
@@ -8,6 +8,7 @@ router.get("/", async (req, res) => {
         const sweetenerData = await Sweeteners.findAll({
             attributes: ["sweetener_id", "sweetener_name", "sweetener_description", "sweetener_origin"],
             include: [
+                /*
                 {
                     model: User,
                     attributes: ["user_name"],
@@ -20,6 +21,7 @@ router.get("/", async (req, res) => {
                         attributes: ["user_name"]
                     }
                 },
+                */
             ],
         });
         res.status(200).json(sweetenerData);
@@ -34,6 +36,7 @@ router.get("/:id", async (req, res) => {
         const sweetenerData = await Sweetener.findOne({
             attributes: ["sweetener_id", "sweetener_name", "sweetener_description", "sweetener_origin"],
             include: [
+                /*
                 {
                     model: User,
                     attributes: ["user_name"],
@@ -46,6 +49,7 @@ router.get("/:id", async (req, res) => {
                         attributes: ["user_name"]
                     }
                 },
+                */
             ],
         });
         res.status(200).json(sweetenerData);
