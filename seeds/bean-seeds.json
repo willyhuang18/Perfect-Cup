@@ -21,7 +21,18 @@
     },
     {
         "bean_name": "Sumatra",
-        "bean_description": "From the Typica family, a sub family of Arabica, Sumatra is ",
-        "bean_origin": ""
+        "bean_description": "From the Typica family, a sub family of Arabica, Sumatra is considered smooth, balanced, with an intense flavor. It contains tropical fruit notes sometimes resembling grapefruit or lime",
+        "bean_origin": "Sumatra coffee is native to Indonesia, specifcally the Mandheling, Lintong, and Gayo regions. It's cultivation began in 1699."
+    },
+    {
+        "bean_name": "Robusta",
+        "bean_description": "Robusta, also know as Coffea canephora, is a hearty, high yield coffee compared to Arabica varieties hence the name. It has a distinct earthy flavour, high caffeine content, but often more bitter than a Arabica variety.",
+        "bean_origin": "Robusta is native to central and western sub-Saharan Africa but mostly grown in Vietnam for worldwide consumption."
+    },
+    {
+        "bean_name": "Liberica",
+        "bean_description": "Liberica is a coffee far more uncommon than Arabica or Robusta due to the difficulty of its cultivation. It is known for its intense smoky and wood flavor.",
+        "bean_origin": "Liberica as its name suggests originates in the west African country of Liberia, in the mordern day it is mostly cultivated across Southeast Asia." 
     }
+
 ]
