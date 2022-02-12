@@ -13,7 +13,7 @@ Sweetener.init(
         },
         sweetener_name: {
             type: DataTypes.STRING,
-            allowNull: falsem
+            allowNull: false,
         },
         sweetener_description: {
             type: DataTypes.STRING,
