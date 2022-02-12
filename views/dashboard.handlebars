@@ -1,0 +1,34 @@
+<div>
+    <div>
+        <div>
+            <section class="home">
+                <div class="row">
+                    <div class="content">
+                        <h3>fresh coffee in the morning</h3>
+                    </div>
+                    <div class="image">
+                        <img src="/img/cup.png" class="main-home-image" alt="">
+                    </div>
+                </div>
+                <div class="image-slider">
+                    <a href="/dashboard/new-post/" type="button"class="btn btn-primary" > your perfect cup </a>
+                </div>
+            </section>
+            <h2 class="title pb-4">Your Cup: </h2>
+        </div>
+    
+{{#if userPost.length}}
+    </div>
+    {{#each userPost as |post|}}
+        {{> post-info post}}
+    </div>
+            <a href="/dashboard/edit/{{post.id}}"><button type="button" class="btn btn-primary">edit cup</button></a>
+</div>
+    {{/each}}
+
+{{else}}
+<h6 class="text-center fw-bold fs-1">Please Make Your Perfect Cup </h6>
+
+{{/if}}
+
+
