@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Coffee, Bean, Roast, Sweetener } = require("../../models");
-//const withAuth = require("../../utils/auth");
+const withAuth = require("../../utils/auth");
 
 // GET users (find all users)
 router.get("/", async (req, res) => {

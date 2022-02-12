@@ -73,20 +73,22 @@ router.get("/:id", async (req, res) => {
 // CREATE a coffee
 router.post("/", async(req, res) => {
     try{
-        const postData = await Post.create({
-            title: req.body.title,
-            content: req.body.content,
+        const coffeeData = await Coffee.create({
+            coffee_name: req.body.coffee_name,
+            coffee_bean: req.body.coffee_bean,
+            coffee_roast: req.body.coffee_roast,
+            coffee_sweetener: req.body.coffee_sweetener,
             user_id: req.session.user_id,
         });
-        res.status(200).json(postData);
+        res.status(200).json(coffeeData);
     } catch (err) {
         res.status(400).json(err);
     }
 });
 
-// UPDATE a post
+// UPDATE a coffee
 router.put("/:id", async(req, res) => {
-    Post.update(req.body, {
+    Coffee.update(req.body, {
         where: {
             id: req.params.id
         },

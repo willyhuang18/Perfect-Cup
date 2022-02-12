@@ -42,7 +42,7 @@ router.get("/", async (req, res) => {
     }
 });
 
-// Render one post 
+// Render one coffee 
 router.get("/coffee/:id", async (req, res) =>{
     try {
         const coffeeData = await Coffee.findByPk(req.params.id, { 
@@ -86,7 +86,7 @@ router.get("/profile", withAuth, async (req, res) => {
         //Find the logged in user based on the session ID
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ["password"]},
-            include: [{ model: Post }],
+            include: [{ model: Coffee }],
         });
         const user = userData.get({ plain: true});
 
@@ -102,7 +102,7 @@ router.get("/profile", withAuth, async (req, res) => {
 // If the user is already logged in, redirect the request to another route
 router.get("/login", (req, res) => {
     if (req.session.logged_in) {
-        res.redirect("/"); //res.redirect("/post");
+        res.redirect("/"); 
         return;
     }
     res.render("login");
