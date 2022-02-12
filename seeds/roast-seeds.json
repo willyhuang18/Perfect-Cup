@@ -1,1 +1,26 @@
-[]
+[
+    {
+        "roast_name": "Light",
+        "roast_description": "As the name suggests this light roasting level that allows the coffee to best maintain its natural flavor and smell"
+    },
+    {
+        "roast_name": "Cinnamon",
+        "roast_description": "Named after the color of the bean after this roast, Cinnamon is a light coffee roast that is well suited to a black coffee."
+    },
+    {
+        "roast_name": "Medium",
+        "roast_description": "Medium is considered the most balanced of roasts, slightly sweeter than Lights but retaining the acidity that's lost in darker roasts"
+    },
+    {
+        "roast_name": "High",
+        "roast_description": "A darker Medium roast with balanced bitterness and acidity content"
+    },
+    {
+        "roast_name": "Full City",
+        "roast_description": "A dark roast, almost at the point where a bean's natural flavor is lost to the smokyness of the roast."
+    },
+    {
+        "roast_name": "French",
+        "roast-description": "About as dark a roast can be before being essentially burnt, the natural flavor nearly completely absent in favor of the bittersweetness of the roast."
+    }
+]
