@@ -1,6 +1,5 @@
 // Contain routes - the homepage and login page
 const router = require("express").Router();
-//const { User, Coffee, Bean, Roast, Sweetener } = require("../../models");
 const { User, Coffee, Bean, Roast, Sweetener } = require("../models");
 const withAuth = require("../utils/auth");
 
@@ -76,7 +75,11 @@ router.get("/coffee/:id", async (req, res) =>{
             ...coffee,
             logged_in: req.session.logged_in
         });
+<<<<<<< Updated upstream
     } catch(err) {
+=======
+    }catch(err){
+>>>>>>> Stashed changes
         res.status(500).json(err);
     }
 });
@@ -95,7 +98,11 @@ router.get("/profile", withAuth, async (req, res) => {
             ...user,
             logged_in: true
         });
+<<<<<<< Updated upstream
     } catch (err){
+=======
+    }catch (err){
+>>>>>>> Stashed changes
         res.status(500).json(err);
     }
 });
@@ -110,8 +117,18 @@ router.get("/login", (req, res) => {
 });
 
 // Render sign up 
+<<<<<<< Updated upstream
 router.get("/signup", (req, res) => {
     res.render("signup");
 });
 
 module.exports = router;
+=======
+ router.get("/signup", (req, res) => {
+     res.render("signup");
+});
+
+module.exports = router;
+
+
+>>>>>>> Stashed changes
