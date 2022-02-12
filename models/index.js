@@ -4,6 +4,7 @@ const Bean = require('./Bean');
 const Roast = require('./Roast');
 const Sweetener = require('./Sweetener');
 
+/*
 Coffee.belongsTo(User, {
     foreignKey: 'user_id'
 });
@@ -19,6 +20,7 @@ Roast.belongsTo(Coffee, {
 Sweetener.belongsTo(Coffee, {
     foreignKey: 'coffee_sweetner'
 });
+*/
 
 
 module.exports = { User, Coffee, Bean, Roast, Sweetener };

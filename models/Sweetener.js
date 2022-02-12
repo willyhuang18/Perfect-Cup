@@ -13,7 +13,7 @@ Sweetener.init(
         },
         sweetener_name: {
             type: DataTypes.STRING,
-            allowNull: falsem
+            allowNull: false,
         },
         sweetener_description: {
             type: DataTypes.STRING,
@@ -22,13 +22,6 @@ Sweetener.init(
         sweetener_origin: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        coffee_sweetener: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'coffee',
-                key: 'coffee_sweetener',
-            },
         },
     },
     {

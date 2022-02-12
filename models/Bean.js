@@ -23,13 +23,6 @@ Bean.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        coffee_bean: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'coffee',
-                key: 'coffee_bean',
-            },
-        },
     },
     {
         sequelize,
