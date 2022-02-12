@@ -9,11 +9,11 @@
     },
     {
         "sweetener_name": "Brown Sugar",
-        "sweetener_description": ""
+        "sweetener_description": "Sugar that hasn't had it's molasses content removed, giving it a slight caramel, or toffee-esque flavor."
     },
     {
         "sweetener_name": "Honey",
-        "sweetener_description": ""
+        "sweetener_description": "A sweet nectar, with a flavor profile as deep and broad as coffee itself."
     },
     {
         "sweetener_name": "Maple Syrup",
@@ -26,9 +26,5 @@
     {
         "sweetener_name": "Salt",
         "sweetener_description": "While appearing contradictory, a tiny pinch of salt can cut the bitterness of coffee while preserving it's flavor."
-    },
-    {
-        "sweetener_name": "Butter",
-        "sweetener_description": ""       
     }
 ]
