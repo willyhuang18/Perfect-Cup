@@ -1,6 +1,6 @@
 # Perfect Cup
 
-In today’s society, it’s hard to see a coffee shop that promotes its shade-grown or organic products. In order to promote ingredient transparency, this application provide all of our coffee ingredients to keep our customers informed when they place an order of their Perfect Cup.  
+In today’s society, it’s hard to see a coffee shop that promotes its shade-grown or organic products. In order to promote ingredient transparency, this application provides all of our coffee ingredients to keep our customers informed when they place an order of their Perfect Cup.  
 
 
 ## Technologies Used
@@ -32,12 +32,24 @@ In today’s society, it’s hard to see a coffee shop that promotes its shade-g
 
 ## User Stories
 
-As a user, I want to be able to login to my profile and present with a histroy of my previous order
+As a user, I want to be able to input my information so that I can login or create a profile to my profile
 
 As a user, I want to be able to create my perfect cup of coffee with wide selection of beans, roasts, and sweeteners
 
 As a user, I want to see others coffee lovers' Perfect Cups
 
+
+## Acceptance Criteria
+
+- [ ] Homepage has a login button and a signup button 
+- [ ] On login, display the login page that has a text input form for user's email and password entry
+- [ ] On login, compare the user's credential to each existing user array and find the user's profile
+- [ ] Display the user's profile in a dashboard page after login
+- [ ] On signup, display a form for user to create a user's profile
+- [ ] Display the user's profile in a dashboard page
+- [ ] Dashboard page has drop-down menu for the user to create a Perfect Cup
+- [ ] Dashboard page has a display area for the Perfect Cup's ingredients and its associated data
+- [ ] Dashboard page has a display area other customers' Perfect Cups 
 
 
 ## Design Layout
