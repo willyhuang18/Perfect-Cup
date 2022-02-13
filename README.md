@@ -1,6 +1,6 @@
 # Perfect Cup
 
-In today’s society, it’s hard to see a coffee shop that promotes its shade-grown or organic products. In order to promote ingredient transparency, this application provides all of our coffee ingredients to keep our customers informed when they place an order of their Perfect Cup.  
+In today’s society, it’s hard to see a coffee shop that promotes its shade-grown or organic products. In order to promote ingredient transparency, this application provides all of our coffee ingredients to keep our customers informed when they place an order of their Perfect Cup. In the meantime, customers are able to create their Perfect Cup of coffee from a variety of flavors and ingredients. This application has a social share buttons that give customers the ability to share their purchase experience on this app. 
 
 
 ## Technologies Used
