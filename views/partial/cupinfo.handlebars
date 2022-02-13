@@ -1,7 +1,7 @@
 
-<div class="card shadow mb-3">
-  <h5 class="card-header">{{title}}</h5>
-  <div class="card-body">
-      {{text}}
-    <h1 class="card-text">{{user.username}}</h1>
-    {{format_date created_at}}  <a href="/post/{{id}}">{{comments.length}} {{format_comment "comment" comments.length}}</a>
+<div class="content">
+   <h2>{{title}}</h2>
+   <h1>{{user.username}}</h1>
+   {{format_date created_at}} 
+   {{comments.length}} {{format_comment "comment" comments.length}}
+   
