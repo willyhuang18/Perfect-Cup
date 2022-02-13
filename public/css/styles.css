@@ -153,19 +153,10 @@ a:hover .liquid{
 }
 
 .home .image-slider a{
-  margin:0 .5rem;
+  margin:0 3rem;
   cursor: pointer;
   margin-top: 5rem;
   margin-right: 20rem;
-}
-
-.home .image-slider img:hover{
-  transform: translateY(-2rem);
-}
-
-
-.home .row .content h3{
-  font-size: 4rem;
 }
 
 section{
@@ -274,7 +265,7 @@ section{
 .cup {
   
   position: relative;
-  background-color: rgb(107, 103, 89);
+  max-width: fit-content;
   width: 25rem;
   height: 20rem;
   outline: 0;
@@ -284,7 +275,7 @@ section{
 
 .cup::before {
   
-  content: url('https://media4.giphy.com/media/JsgQEI68w5juo/200.gif');
+  content: url('https://media1.giphy.com/media/l41lRi0VWdnH90yJy/giphy.gif');
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,3 +313,160 @@ section{
   }
   
 }
+
+.drop li a {text-decoration : none; color : #2d2f31;}
+
+.drop ul{
+  list-style:circle;
+}
+.drop {
+  width : 300px; 
+  background: #d9d9d9;
+  margin : 40px auto; 
+}
+
+.drop label {
+  padding : 15px;
+  background : #2d2f31; 
+  color : white;
+  font-size : 1.2em;
+  font-variant : small-caps;
+  cursor : pointer;
+  display: block;
+}
+
+.drop label::after {
+  float: right;
+  right: 10%;
+  content: " ";
+}
+
+.slides {
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height .4s ease;
+}
+.drop input{
+  display: none;
+}
+
+.drop li:hover {background-color: rgba(95, 85, 77, 0.897);}
+
+
+#touch {position: absolute; opacity: 0; height: 0px;}    
+
+#bean:checked + .slides {height: 300px;} 
+
+#roast:checked + .slides {height: 300px;} 
+
+#sweet:checked + .slides {height: 300px;} 
+
+.card{
+  width: 500px;
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+.card__link:hover::after {
+  width: 100%;
+}
+
+h5
+ {
+   margin:0px;
+   font-size:1.4em;
+   font-weight:700;
+ }
+
+p {
+   font-size:12px;
+ }
+.centers{
+  display: table-cell;
+  flex-wrap: nowrap;
+}
+
+.section{
+  display: inline;
+}
+ 
+   
+.property-card  {
+  height:18em;
+  width:14em;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  position:relative;   
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  
+  
+}
+      
+.property-image{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+      
+
+.property-description{
+  background-color: #FAFAFC;
+  height:12em;
+  width:14em;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+}
+      
+
+.property-social-icons{
+  width:1em;
+  height:1em;
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+      
+      
+      
+.property-card:hover .property-description{
+  height:0em;
+  padding:0px 1em;
+}
+
+.property-card:hover .property-image{height:18em;}
+    
+
+      
