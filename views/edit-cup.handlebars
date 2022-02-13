@@ -1,0 +1,37 @@
+<article>
+     <a href="/dashboard" type="button" class=" btn m-3 text-light " style="background: #6f4937;"> &larr; <span>Back To Dashboard</span>
+                <div class="liquid"></div>
+            </a>
+       <h1 class="heading"> Coffee <span>Edit Cup:</span></h1>
+    
+    <section class="book">
+    <form class="updateForm">
+        <label for="post-title">Blog title:</label>
+        <input id="updateTitle" type="text" placeholder="your title" class="box" value="{{title}}">
+        <label for="post-content">Blog content:</label>
+        <textarea id="updateText" class="form-control box"type="text" placeholder="your content">{{text}}</textarea>
+        
+
+        <input type="submit" value="Save Post" class="signUpBtn">
+        <input type="submit" value="Delete Post" class="signUpBtn deletePost">
+    </form>
+
+    </section>
+
+    <section class="book">
+    <form class="commentForm">
+        <label for="post-content">Comment</label>
+        <textarea id="updateText" class="form-control box "type="text" placeholder="your comment" id="commentText"></textarea>
+    
+        <input type="submit" value="Add Comment" class="signUpBtn">
+    </form>
+
+    </section>
+</article>
+
+
+{{> comments post.comments}}
+
+<script src="/js/comment.js"></script>
+<script src="/js/updatepost.js"></script>
+<script src="/js/deletepost.js"></script>
