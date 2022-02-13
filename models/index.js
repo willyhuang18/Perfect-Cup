@@ -1,26 +1,17 @@
 const User = require('./User');
 const Coffee = require('./Coffee');
-const Bean = require('./Bean');
-const Roast = require('./Roast');
-const Sweetener = require('./Sweetener');
-
-/*
-Coffee.belongsTo(User, {
-    foreignKey: 'user_id'
-});
-
-Bean.belongsTo(Coffee, {
-    foreignKey: 'coffee_bean'
-});
-
-Roast.belongsTo(Coffee, {
-    foreignKey: 'coffee_roast'
-});
-
-Sweetener.belongsTo(Coffee, {
-    foreignKey: 'coffee_sweetner'
-});
-*/
+const Ingredient = require('./Ingredient');
+const CoffeeIngredient = require('./CoffeeIngredient');
 
 
-module.exports = { User, Coffee, Bean, Roast, Sweetener };
+
+Coffee.belongsTo(User, { foreignKey: 'user_id' });
+
+Coffee.belongsToMany(Ingredient, {through: CoffeeIngredient, foreignKey: 'coffee_id'});
+
+Ingredient.belongsToMany(Coffee, {through: CoffeeIngredient, foreignKey: 'ingredient_id'});
+
+
+
+
+module.exports = { User, Coffee, Ingredient, CoffeeIngredient};

@@ -1,34 +1,31 @@
-const {Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Sweetener extends Model {}
+class Ingredient extends Model {}
 
-Sweetener.init( 
+Ingredient.init( 
     {
-        sweetener_id: {
+        ingredient_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
-        sweetener_name: {
+        ingredient_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        sweetener_description: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        sweetener_origin: {
+        ingredient_description: {
             type: DataTypes.STRING,
             allowNull: false,
         },
     },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
-        modelName: 'sweetener',
+        modelName: 'ingredient'
     }
-    );
+);
 
-    module.exports = Sweetener;
+module.exports = Ingredient;
