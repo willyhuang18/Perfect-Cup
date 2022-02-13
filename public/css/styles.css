@@ -14,7 +14,6 @@
   box-sizing: border-box;
 }
 
-
 #main {
     height: 900px;
     background-image:url('./img/about.png');  
@@ -103,7 +102,7 @@ a:hover .liquid{
 }
 
 .home{
-  min-height: 100vh;
+  min-height: 70vh;
   padding-top: 12rem;
   background: url('./img/bg.jpg') no-repeat;
   background-position: center;
@@ -150,6 +149,7 @@ a:hover .liquid{
 
 .home .image-slider{
   text-align: center;
+  margin-top: 50px;
 }
 
 .home .image-slider a{
@@ -368,107 +368,59 @@ section{
   width: 500px;
 }
 
-.card__link::after {
-  position: absolute;
-  top: 25px;
-  left: 0;
-  content: "";
-  width: 0%;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.6);
-  transition: all 0.5s;
-}
-.card__link:hover::after {
-  width: 100%;
+
+
+ .container .card {
+  max-width: 300px;
+  height: 215px;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out
 }
 
-h5
- {
-   margin:0px;
-   font-size:1.4em;
-   font-weight:700;
- }
-
-p {
-   font-size:12px;
- }
-.centers{
-  display: table-cell;
-  flex-wrap: nowrap;
+.container .card:hover {
+  height: 450px
 }
 
-.section{
-  display: inline;
-}
- 
-   
-.property-card  {
-  height:18em;
-  width:20em;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  position:relative;   
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  border-radius:16px;
-  overflow:hidden;
-  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
-  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+.container .card .imgContainer {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  top: -50px;
+  left: 10px;
+  z-index: 1;
+  content: url('https://media1.giphy.com/media/l41lRi0VWdnH90yJy/giphy.gif');
   
-  
-}
-      
-.property-image{
-  height:6em;
-  width:20em;
-  padding:1em 2em;
-  position:Absolute;
-  top:0px;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
-  background-size:cover;
-  background-repeat:no-repeat;
-}
-      
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2)
 
-.property-description{
-  background-color: #FAFAFC;
-  height:12em;
-  width:20em;
-  position:absolute;
-  bottom:0em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  padding: 0.5em 1em;
-  text-align:center;
-}
-      
-
-.property-social-icons{
-  width:1em;
-  height:1em;
-  position:absolute;
-  bottom:1em;
-  left:1em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-       
-      
-      
-.property-card:hover .property-description{
-  height:0em;
-  padding:0px 1em;
 }
 
-.property-card:hover .property-image{height:18em;}
-    
 
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-in-out
+}
+
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s
+}
+
+@media (max-width: 330px) {
+  .container .card .imgContainer {
+      left: -2px
+  }
+}
       
 .updateForm,
 .commentForm label{
