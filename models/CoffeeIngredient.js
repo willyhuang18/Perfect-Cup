@@ -10,7 +10,7 @@ CoffeeIngredient.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoincrement: true,
+            autoIncrement: true,
         },
         coffee_id: {
             type: DataTypes.INTEGER,
