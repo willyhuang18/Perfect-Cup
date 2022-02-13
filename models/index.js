@@ -7,7 +7,7 @@ const CoffeeIngredient = require('./CoffeeIngredient');
 
 Coffee.belongsTo(User, { foreignKey: 'user_id' });
 
-Coffee.belongsToMany(Ingredient, {through: CoffeeIngredient, foreignKey: 'coffee_id'});
+Coffee.belongsToMany(Ingredient, {through: CoffeeIngredient, foreignKey: 'coffee_id'}); 
 
 Ingredient.belongsToMany(Coffee, {through: CoffeeIngredient, foreignKey: 'ingredient_id'});
 
@@ -15,3 +15,4 @@ Ingredient.belongsToMany(Coffee, {through: CoffeeIngredient, foreignKey: 'ingred
 
 
 module.exports = { User, Coffee, Ingredient, CoffeeIngredient};
+

@@ -1,32 +1,24 @@
 // Contain routes - the homepage and login page
 const router = require("express").Router();
-const { User, Coffee, Bean, Roast, Sweetener } = require("../models");
+const { User, Coffee, Ingredient } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
     try {
         const coffeeData = await Coffee.findAll({
-            attributes: ["coffee_id", "coffee_name", "coffee_bean", "coffee_roast", "coffee_sweetener" ],
+            attributes: ["coffee_id", "coffee_name"],
             include: [
                 {
                     model: User,
                     attributes: ["user_name"],
                 },
                 {
-                    model: Bean,
-                    attributes: ["bean_id", "bean_name", "bean_description", "bean_origin"],
+                    model: Ingredient,
+                    attributes: ["ingredient_id", "ingredient_name", "ingredient_description"],
                     include: {
                         model: User,
                         attributes: ["user_name"]
                     }
-                },
-                {
-                    model: Roast,
-                    attributes: ["roast_id", "roast_name", "roast_description", "roast_origin"],
-                },
-                {
-                    model: Sweetener,
-                    attributes: ["sweetener_id", "sweetener_name", "sweetener_description", "sweetener_origin"],
                 },
             ],
         });
@@ -52,20 +44,12 @@ router.get("/coffee/:id", async (req, res) =>{
                     attributes: ["user_name"]
                 },
                 {
-                    model: Bean,
-                    attributes: ["bean_id", "bean_name", "bean_description", "bean_origin"],
+                    model: Ingredient,
+                    attributes: ["ingredient_id", "ingredient_name", "ingredient_description"],
                     include: {
                         model: User,
                         attributes: ["user_name"]
                     }
-                },
-                {
-                    model: Roast,
-                    attributes: ["roast_id", "roast_name", "roast_description", "roast_origin"],
-                },
-                {
-                    model: Sweetener,
-                    attributes: ["sweetener_id", "sweetener_name", "sweetener_description", "sweetener_origin"],
                 },
             ],
         });

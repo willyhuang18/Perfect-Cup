@@ -7,22 +7,6 @@ router.get("/", async (req, res) => {
     try {
         const sweetenerData = await Sweeteners.findAll({
             attributes: ["sweetener_id", "sweetener_name", "sweetener_description", "sweetener_origin"],
-            include: [
-                /*
-                {
-                    model: User,
-                    attributes: ["user_name"],
-                },
-                {
-                    model: Coffee,
-                    attributes: ["coffee_id", "coffee_name", "coffee_sweetener", "coffee_sweetener"],
-                    include: {
-                        model: User,
-                        attributes: ["user_name"]
-                    }
-                },
-                */
-            ],
         });
         res.status(200).json(sweetenerData);
     } catch (err){
@@ -35,22 +19,6 @@ router.get("/:id", async (req, res) => {
     try {
         const sweetenerData = await Sweetener.findOne({
             attributes: ["sweetener_id", "sweetener_name", "sweetener_description", "sweetener_origin"],
-            include: [
-                /*
-                {
-                    model: User,
-                    attributes: ["user_name"],
-                },
-                {
-                    model: Coffee,
-                    attributes: ["coffee_id", "coffee_name", "coffee_roast", "coffee_sweetener"],
-                    include: {
-                        model: User,
-                        attributes: ["user_name"]
-                    }
-                },
-                */
-            ],
         });
         res.status(200).json(sweetenerData);
     } catch (err) {
