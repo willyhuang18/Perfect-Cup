@@ -1,22 +1,52 @@
 <div class="container container-fluid align-center">
   <div class="row mt-4">
-    <div class="col-md-6">
     <h1 class="heading"> Coffee <span>Create a New Perfect Cup:</span></h1>
+      <div class="d-flex justify-content-center">
+        <div class="cup "></div>
+      </div>
+      <div>
+        <nav class="drop">
+          <label for="bean">Bean </label>               
+          <input type="checkbox" id="bean"> 
+          <ul class="slides">
+            <li><a href="#">Lorem Ipsum</a></li> 
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
 
-    <form class="form newPostForm ">
-      <div class="cup"></div>
-      <div class="mb-3">
-        <label for="post-name">Title: </label>
-        <input class="form-control" type="text" id="postTitle" name="title" placeholder="insert blog title here" />
+          </ul>
+        </nav> 
       </div>
-      <div class="mb-3">
-        <label for="blogContent">description:</label>
-        <textarea class="form-control" id="blogContent" name="text"  placeholder="insert blog content here"></textarea>
+      <div>
+        <nav class="drop">
+          <label for="roast"><p>Roast level</p></label>               
+          <input type="checkbox" id="roast"> 
+          <ul class="slides">
+            <li><a href="#">Lorem Ipsum</a></li> 
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+          </ul>
+        </nav> 
       </div>
-      <div class="mb-3">
-        <button type="submit" class="btn btn-primary">Create</button>
+      <div>
+        <nav class="drop">
+          <label for="sweet"><p>Sweetness</p></label>               
+          <input type="checkbox" id="sweet"> 
+          <ul class="slides">
+            <li><a href="#">Lorem Ipsum</a></li> 
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+          </ul>
+        </nav> 
+        </div>
+      <div class="d-flex mb-3 px-3 justify-content-center">
+        <a href="/" type="button" class=" btn  active  m-1 text-light" style="background: #375d6f;"><span> Create</span>
+          <div class="liquid"></div>
+
+        </a>
       </div>
-    </form>
   </div>
 
 <script src="/js/newpost.js"></script>
