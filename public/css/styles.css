@@ -349,7 +349,7 @@ section{
   text-align: center;
   transition: height .4s ease;
 }
-input{
+.drop input{
   display: none;
 }
 
@@ -363,3 +363,110 @@ input{
 #roast:checked + .slides {height: 300px;} 
 
 #sweet:checked + .slides {height: 300px;} 
+
+.card{
+  width: 500px;
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+.card__link:hover::after {
+  width: 100%;
+}
+
+h5
+ {
+   margin:0px;
+   font-size:1.4em;
+   font-weight:700;
+ }
+
+p {
+   font-size:12px;
+ }
+.centers{
+  display: table-cell;
+  flex-wrap: nowrap;
+}
+
+.section{
+  display: inline;
+}
+ 
+   
+.property-card  {
+  height:18em;
+  width:14em;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  position:relative;   
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  
+  
+}
+      
+.property-image{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+      
+
+.property-description{
+  background-color: #FAFAFC;
+  height:12em;
+  width:14em;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+}
+      
+
+.property-social-icons{
+  width:1em;
+  height:1em;
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+      
+      
+      
+.property-card:hover .property-description{
+  height:0em;
+  padding:0px 1em;
+}
+
+.property-card:hover .property-image{height:18em;}
+    
+
+      
