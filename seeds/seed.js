@@ -1,11 +1,10 @@
 const sequelize = require('../config/connection');
-const {User, Coffee, Roast, Bean, Sweetener } = require('../models');
+const {User, Coffee, Ingredient, CoffeeIngredient} = require('../models');
 
 const userData = require('./user-seeds.json');
 const coffeeData = require('./coffee-seeds.json');
-const roastData = require('./roast-seeds.json');
-const beanData = require('./bean-seeds.json');
-const sweetenerData = require('./sweetener-seeds.json');
+const ingredientData = require('./ingredient-seeds.json');
+const coffeeIngredientData = require('./coffee-ingredient-seeds.json');
 
 
 const seedDatabase = async () => {
@@ -21,19 +20,14 @@ const seedDatabase = async () => {
         returning: true,
     });
 
-    await Roast.bulkCreate(roastData, {
+    await Ingredient.bulkCreate(ingredientData, {
         individualHooks: true,
         returning: true,
     });
 
-    await Bean.bulkCreate(beanData, {
+    await CoffeeIngredient.bulkCreate(coffeeIngredientData, {
         individualHooks: true,
         returning: true,
-    });
-
-    await Sweetener.bulkCreate(sweetenerData, {
-        individualHooks: true,
-        returningL: true,
     });
 }
 
