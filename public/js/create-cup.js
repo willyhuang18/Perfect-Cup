@@ -13,3 +13,31 @@
 //     $(list).attr("class", "list-group-item");
 //     $("#list").append(list);
 // }
+async function newFormHandler(event) {
+    event.preventDefault();
+  
+    const bean = document.querySelector('ul[name=bean]').value;
+    const roast = document.querySelector('ul[name=roast]').value;
+    const sweetness = document.querySelector('ul[name=sweetness]').value;
+
+  
+    const response = await fetch(`/api/posts`, {
+      method: 'POST',
+      body: JSON.stringify({
+        bean,
+        roast,
+        sweetness
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+  
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert(response.statusText);
+    }
+  }
+  
+  document.querySelector('.newCup').addEventListener('submit', newFormHandler);
