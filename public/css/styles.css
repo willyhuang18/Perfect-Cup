@@ -404,7 +404,7 @@ p {
    
 .property-card  {
   height:18em;
-  width:14em;
+  width:20em;
   -webkit-box-orient:vertical;
   -webkit-box-direction:normal;
   position:relative;   
@@ -421,7 +421,7 @@ p {
       
 .property-image{
   height:6em;
-  width:14em;
+  width:20em;
   padding:1em 2em;
   position:Absolute;
   top:0px;
@@ -437,7 +437,7 @@ p {
 .property-description{
   background-color: #FAFAFC;
   height:12em;
-  width:14em;
+  width:20em;
   position:absolute;
   bottom:0em;
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
