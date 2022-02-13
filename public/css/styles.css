@@ -153,19 +153,10 @@ a:hover .liquid{
 }
 
 .home .image-slider a{
-  margin:0 .5rem;
+  margin:0 3rem;
   cursor: pointer;
   margin-top: 5rem;
   margin-right: 20rem;
-}
-
-.home .image-slider img:hover{
-  transform: translateY(-2rem);
-}
-
-
-.home .row .content h3{
-  font-size: 4rem;
 }
 
 section{
