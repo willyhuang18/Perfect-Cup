@@ -1,1 +1,15 @@
-<h1>homepage</h1>
+{{#each userPost as |post|}}
+<div class="container flex section ">
+    <div class="row d-flex  justify-content-center centers">
+        <div class=" d-flex justify-content-center " >
+            <div class="property-card ">
+            {{> post-info post }}
+                <li><div class="property-image"></div></li>
+                </div>
+        </div>
+    </div>
+    </div>
+</section>
+{{else}}
+<h6 class="text-center fw-bold fs-1">Please Update Your Blog</h6>
+{{/each}}
