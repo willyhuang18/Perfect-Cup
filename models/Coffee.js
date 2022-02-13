@@ -11,29 +11,11 @@ Coffee.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        coffee_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        coffee_bean: {
+        user_id: {
             type: DataTypes.INTEGER,
-            references: {       //added MT
-                model: 'bean',      //added MT
-                key: 'bean_id', //added MT
-            },
-        },
-        coffee_roast: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'roast',
-                key: 'roast_id',
-            },
-        },
-        coffee_sweetener: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'sweetener',
-                key: 'sweetener_id',
+            reference: {
+                model: 'user',
+                key: 'user_id'
             },
         },
 
