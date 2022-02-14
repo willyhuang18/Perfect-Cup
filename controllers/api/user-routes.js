@@ -58,7 +58,11 @@ router.put("/:d", async(req, res) => {
 router.post("/", async (req, res) => {
     try {
         console.log(`req.body.name = ${JSON.stringify(req.body.name)}`);
-        const userData = await User.create(req.body);
+        const userData = await User.create({
+            user_name: req.body.name,
+            user_email: req.body.email,
+            user_password: req.body.password
+        });
         // Store user data during session
         req.session.save(() => {
             req.session.id = userData.id;
@@ -89,10 +93,37 @@ router.delete("/:id", async(req, res) => {
 });
 
 // Log in for users
+/*router.post('/login', (req, res)=>{
+    User.findOne({
+        where:{
+            user_email:req.body.email
+        }
+    })
+    .then(response =>{
+        if(!response){
+            res.status(404).json({ message: 'Please enter valid user Email'});
+            return;
+        }
+        //verify user 
+        const valid = response.checkPassword(req.body.password);
+        if(!valid) {
+            res.status(400).json({message: 'Please Enter password again.'})
+            return;
+        }
+           //using session to save user data
+        req.session.save(() => {
+            req.session.email = response.email;
+            req.session.logged_in = true;
+
+            res.json({user: response, message: 'You had logged in!' });
+        })
+    })
+})
+*/
 router.post("/login", async (req, res) => {
     try {
         // Verify user
-        const userData = await User.findOne({ where: {email: req.body.email }});
+        const userData = await User.findOne({ where: {user_email: req.body.email }});
         if (!userData){
             res.status(400).json({ message: "Incorrect email or password, please try again"});
             return;
@@ -104,7 +135,7 @@ router.post("/login", async (req, res) => {
             return;
         }
         req.session.save(() => {
-            req.session.id = userData.id;
+            req.session.user_email = userData.email;
             req.session.logged_in = true;
             res.json({ user: userData, message: "You are now logged in! "});
         });

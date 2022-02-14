@@ -32,11 +32,11 @@ In today’s society, it’s hard to see a coffee shop that promotes its shade-g
 
 ## User Stories
 
-As a user, I want to be able to input my information so that I can login or create a profile to my profile
+As a user, I want to be able to input my information so that I can login or create a profile.
 
-As a user, I want to be able to create my perfect cup of coffee with wide selection of beans, roasts, and sweeteners
+As a user, I want to be able to create my perfect cup of coffee with wide selection of beans, roasts, and sweeteners.
 
-As a user, I want to see others coffee lovers' Perfect Cups
+As a user, I want to see others coffee lovers' Perfect Cups.
 
 
 ## Acceptance Criteria
