@@ -57,7 +57,7 @@ router.put("/:d", async(req, res) => {
 //CREATE a new user
 router.post("/", async (req, res) => {
     try {
-        console.log(`req.body.name = ${JSON.stringify(req.body.name)}`);
+
         const userData = await User.create({
             user_name: req.body.name,
             user_email: req.body.email,
@@ -65,7 +65,7 @@ router.post("/", async (req, res) => {
         });
         // Store user data during session
         req.session.save(() => {
-            req.session.id = userData.id;
+            req.session.user_id = userData.user_id;
             req.session.logged_in = true;
             res.status(200).json(userData);
         });
@@ -92,34 +92,6 @@ router.delete("/:id", async(req, res) => {
     }
 });
 
-// Log in for users
-/*router.post('/login', (req, res)=>{
-    User.findOne({
-        where:{
-            user_email:req.body.email
-        }
-    })
-    .then(response =>{
-        if(!response){
-            res.status(404).json({ message: 'Please enter valid user Email'});
-            return;
-        }
-        //verify user 
-        const valid = response.checkPassword(req.body.password);
-        if(!valid) {
-            res.status(400).json({message: 'Please Enter password again.'})
-            return;
-        }
-           //using session to save user data
-        req.session.save(() => {
-            req.session.email = response.email;
-            req.session.logged_in = true;
-
-            res.json({user: response, message: 'You had logged in!' });
-        })
-    })
-})
-*/
 router.post("/login", async (req, res) => {
     try {
         // Verify user
@@ -135,7 +107,7 @@ router.post("/login", async (req, res) => {
             return;
         }
         req.session.save(() => {
-            req.session.user_email = userData.email;
+            req.session.user_id = userData.user_id;
             req.session.logged_in = true;
             res.json({ user: userData, message: "You are now logged in! "});
         });
