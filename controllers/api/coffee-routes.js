@@ -1,32 +1,16 @@
 const router = require("express").Router();
-const { User, Coffee, Bean, Roast, Sweetener } = require("../../models");
+const { User, Coffee} = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET all coffee
 router.get("/", async (req, res) => {
     try {
         const coffeeData = await Coffee.findAll({
-            attributes: ["coffee_id", "coffee_name", "coffee_bean", "coffee_roast", "coffee_sweetener" ],
+            attributes: ["coffee_id"],
             include: [
                 {
                     model: User,
                     attributes: ["user_name"],
-                },
-                {
-                    model: Bean,
-                    attributes: ["bean_id", "bean_name", "bean_description", "bean_origin"],
-                    include: {
-                        model: User,
-                        attributes: ["user_name"]
-                    }
-                },
-                {
-                    model: Roast,
-                    attributes: ["roast_id", "roast_name", "roast_description", "roast_origin"],
-                },
-                {
-                    model: Sweetener,
-                    attributes: ["sweetener_id", "sweetener_name", "sweetener_description", "sweetener_origin"],
                 },
             ],
         });
@@ -40,31 +24,15 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
         const coffeeData = await Coffee.findOne({
-            attributes: ["coffee_id", "coffee_name", "coffee_bean", "coffee_roast", "coffee_sweetener" ],
+            attributes: ["coffee_id" ],
             include: [
                 {
                     model: User,
                     attributes: ["user_name"],
                 },
-                {
-                    model: Bean,
-                    attributes: ["bean_id", "bean_name", "bean_description", "bean_origin"],
-                    include: {
-                        model: User,
-                        attributes: ["user_name"]
-                    }
-                },
-                {
-                    model: Roast,
-                    attributes: ["roast_id", "roast_name", "roast_description", "roast_origin"],
-                },
-                {
-                    model: Sweetener,
-                    attributes: ["sweetener_id", "sweetener_name", "sweetener_description", "sweetener_origin"],
-                },
             ],
         });
-        res.status(200).json(coffeeDate);
+        res.status(200).json(coffeeData);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -75,9 +43,6 @@ router.post("/", async(req, res) => {
     try{
         const coffeeData = await Coffee.create({
             coffee_name: req.body.coffee_name,
-            coffee_bean: req.body.coffee_bean,
-            coffee_roast: req.body.coffee_roast,
-            coffee_sweetener: req.body.coffee_sweetener,
             user_id: req.session.user_id,
         });
         res.status(200).json(coffeeData);
@@ -90,7 +55,7 @@ router.post("/", async(req, res) => {
 router.put("/:id", async(req, res) => {
     Coffee.update(req.body, {
         where: {
-            id: req.params.id
+            coffee_id: req.params.id
         },
     }).then(postData => {
         if(!postData) {
@@ -104,19 +69,19 @@ router.put("/:id", async(req, res) => {
     });
 });
 
-// DELETE a post
+// DELETE a coffee
 router.delete("/:id", async(req, res) =>{
     try {
-        const postData = await Post.destroy({
+        const coffeeData = await Coffee.destroy({
             where: {
-                id: req.params.id
+                coffee_id: req.params.id
             }
         });
-        if (!postData) {
-            res.status(404).json ({ message: "No post found with this id!"});
+        if (!coffeeData) {
+            res.status(404).json ({ message: "No coffee found with this id!"});
             return;
         }
-        res.status(200).json(postData);
+        res.status(200).json(coffeeData);
     } catch (err){
         res.status(500).json(err);
     }
