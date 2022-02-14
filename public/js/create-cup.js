@@ -48,13 +48,14 @@ $('.sel__box__options').click(function() {
 async function newPostHandler(event) {
   event.preventDefault();
 
-  const bean = document.querySelector('.bean').value.trim();
-  console.log(bean);
-  if(bean){
+  const title = document.getElementById('select-profession');
+  const value = title.options[title.selectedIndex].value;
+  console.log(value);
+
       const response = await fetch(`/api/posts`, {
           method: 'POST',
           body: JSON.stringify({
-          bean
+          value
           }),
           headers: {
           'Content-Type': 'application/json'
@@ -66,7 +67,7 @@ async function newPostHandler(event) {
       } else {
           alert(response.statusText);
       }
-  }
+
 }
 
 document.querySelector('.newPostForm').addEventListener('submit', newPostHandler);
