@@ -1,43 +1,24 @@
-// function past(e){
-//     //declare a variable for the event target
-//     var listEl = e.target;
-//     //if the target click the item, it will execute the current weather function
-//     if(e.target.matches("li")){
-//         city = listEl.textContent.trim();
-//         currentWeather(city);
-//     }
-// }
+//create new post function
+async function newPostHandler(event) {
+  event.preventDefault();
 
-// function list(e){
-//     var list = $("<li>"+e+"</li>");
-//     $(list).attr("class", "list-group-item");
-//     $("#list").append(list);
-// }
-async function newFormHandler(event) {
-    event.preventDefault();
+  const bean = document.querySelector('.bean').value.trim();
   
-    const bean = document.querySelector('ul[name=bean]').value;
-    const roast = document.querySelector('ul[name=roast]').value;
-    const sweetness = document.querySelector('ul[name=sweetness]').value;
-
-  
-    const response = await fetch(`/api/posts`, {
+  const response = await fetch(`/api/posts`, {
       method: 'POST',
       body: JSON.stringify({
-        bean,
-        roast,
-        sweetness
+      bean
       }),
       headers: {
-        'Content-Type': 'application/json'
+      'Content-Type': 'application/json'
       }
-    });
-  
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
+  });
+
+  if (response.ok) {
+      document.location.replace('/dashboard/');
+  } else {
       alert(response.statusText);
-    }
   }
-  
-  document.querySelector('.newCup').addEventListener('submit', newFormHandler);
+}
+
+document.querySelector('.newPostForm').addEventListener('submit', newPostHandler);
