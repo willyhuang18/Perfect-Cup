@@ -6,53 +6,39 @@
         <div class="cup "></div>
       </div>
       <div class="d-flex  justify-content-center">
-      <div class="newCup "> 
-        {{!-- <nav class="drop">
-          <label for="bean">Bean</label>               
-          <input type="checkbox" id="bean"> 
-          <select class="slides bean" name="bean">
-            <option selected > bean</option>
-            <option>coffee</option>
-            <option>drink</option>
-            {{#each ingredient as |ingredient|}}
-            <li><a href="#">{{ingredient.ingredient_name}}</a></li> 
-          {{/each}}
-          </select>
-        </nav>  --}}
-      </div>
-      <div class="sel sel--black-panther ">
-        <select name="select-profession" type="checkbox" class="slides" id="select-profession">
-          <option value="" disabled>Bean</option>
-          {{#each coffee as |ingredient|}}
-          <option value='{{ingredient.ingredient_name}}'>{{ingredient.ingredient_name}}</option>
-          {{/each}}
-          {{!-- <option value="hacker">Hacker</option>
-          <option value="gamer">Gamer</option>
-          <option value="developer">Developer</option>
-          <option value="programmer">Programmer</option>
-          <option value="designer">Designer</option> --}}
-        </select>
-        </div>
-           <div class="sel sel--black-panther ">
-        <select name="select-profession" type="checkbox" class="slides" id="select-profession">
-          <option value="" disabled>Roast</option>
-          {{!-- <option value="hacker">Hacker</option>
-          <option value="gamer">Gamer</option>
-          <option value="developer">Developer</option>
-          <option value="programmer">Programmer</option>
-          <option value="designer">Designer</option> --}}
-        </select>
-        </div>
-          <div class="sel sel--black-panther ">
+        <div class="sel sel--black-panther ">
           <select name="select-profession" type="checkbox" class="slides" id="select-profession">
-          <option value="" disabled>Sweetness</option>
-          {{!-- <option value="hacker">Hacker</option>
-          <option value="gamer">Gamer</option>
-          <option value="developer">Developer</option>
-          <option value="programmer">Programmer</option>
-          <option value="designer">Designer</option> --}}
-        </select>
-        </div>
+            <option value="" disabled>Bean</option>
+            {{#each coffee as |ingredient|}}
+            <option value='{{ingredient.ingredient_name}}'>{{ingredient.ingredient_name}}</option>
+            {{/each}}
+            {{!-- <option value="hacker">Hacker</option>
+            <option value="gamer">Gamer</option>
+            <option value="developer">Developer</option>
+            <option value="programmer">Programmer</option>
+            <option value="designer">Designer</option> --}}
+          </select>
+          </div>
+            <div class="sel sel--black-panther ">
+          <select name="select-profession" type="checkbox" class="slides" id="select-profession">
+            <option value="" disabled>Roast</option>
+            {{!-- <option value="hacker">Hacker</option>
+            <option value="gamer">Gamer</option>
+            <option value="developer">Developer</option>
+            <option value="programmer">Programmer</option>
+            <option value="designer">Designer</option> --}}
+          </select>
+          </div>
+            <div class="sel sel--black-panther ">
+            <select name="select-profession" type="checkbox" class="slides" id="select-profession">
+            <option value="" disabled>Sweetness</option>
+            {{!-- <option value="hacker">Hacker</option>
+            <option value="gamer">Gamer</option>
+            <option value="developer">Developer</option>
+            <option value="programmer">Programmer</option>
+            <option value="designer">Designer</option> --}}
+          </select>
+          </div>
       </div>
     <div class="d-flex mb-3 px-3 justify-content-center">
         <a href="/" type="submit" class=" btn  active  m-1 text-light" style="background: #375d6f;"><span> Create</span>
