@@ -17,7 +17,7 @@
 
 <body>
 <div class="flex-column justify-space-around">
-             {{#if loggedIn}}
+            {{#if logged_in}}
             <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <div class=" d-flex justify-space-between align-center">
@@ -38,53 +38,53 @@
                 </div>
             </nav>
              {{else}}
-             <div class="main" id="main">
-                 <div class="jumbotron start text-center">
-                     <div class="m-3">
-                        <img src="/img/logo.png" alt="logo" >
-                     </div>
-                     <a href="/" type="button" class=" btn active  m-1 text-light" aria-current="page" style="background: #6F4E37;"><span> Homepage</span>
-                        <div class="liquid"></div>
-                    </a>
-                     <a href="/login" class=" btn text-light" type="submit" style="background: #6F4E37;"><span> Log In</span>
-                        <div class="liquid"></div>
-                    
-                     </a>
-                 </div>
-             </div>
+                <div class="main" id="main">
+                    <div class="jumbotron start text-center">
+                        <div class="m-3">
+                            <img src="/img/logo.png" alt="logo" >
+                        </div>
+                        <a href="/" type="button" class=" btn active  m-1 text-light" aria-current="page" style="background: #6F4E37;"><span> Homepage</span>
+                            <div class="liquid"></div>
+                        </a>
+                        <a href="/login" class=" btn text-light" type="submit" style="background: #6F4E37;"><span> Log In</span>
+                            <div class="liquid"></div>
+                        </a>
+                    </div>
+                </div>
              {{/if}}
         <main class="main">
         {{{ body }}}
         </main>
-    <section class="footer">
-        <div class="box-container">
-            <div>
-                <h1 class="heading"> Coffee <span>Contact Info</span> </h1>
+        <section class="footer">
+            <div class="box-container">
+                <div>
+                    <h1 class="heading"> Coffee <span>Contact Info</span> </h1>
+
+                </div>
+                <div class="box">
+                <a href="#"> <i class="fas fa-phone"></i><p class="hvr-bounce-in"> +123-456-7890</p> </a>
+                <a href="#"> <i class="fas fa-phone"></i><p class="hvr-bounce-in">+111-222-3333 </p> </a>
+                <a href="mailto:@perfectcupcoffee@gmail.com"><i class="fas fa-envelope"></i><p class="hvr-bounce-in">perfectcupcoffee@gmail.com</p></a>
+            </div>
+
+            <div class="box">
+                <a href="/"> <i class="fab fa-facebook-f"></i><p class="hvr-bounce-in">facebook</p>  </a>
+                <a href="/"> <i class="fab fa-twitter"></i><p class="hvr-bounce-in">twitter</p>  </a>
+                <a href="https://github.com/MChambersIV/Perfect-Cup"> <i class="fab fa-github"></i> <p class="hvr-bounce-in">GitHub</p> </a>
+                <a href="/"> <i class="fab fa-instagram"></i> <p class="hvr-bounce-in">instagram</p> </a>
+                <a href="/"> <i class="fab fa-linkedin"></i><p class="hvr-bounce-in">linkedin</p>  </a>
+            </div>
 
             </div>
-            <div class="box">
-            <a href="#"> <i class="fas fa-phone"></i><p class="hvr-bounce-in"> +123-456-7890</p> </a>
-            <a href="#"> <i class="fas fa-phone"></i><p class="hvr-bounce-in">+111-222-3333 </p> </a>
-            <a href="mailto:@perfectcupcoffee@gmail.com"><i class="fas fa-envelope"></i><p class="hvr-bounce-in">perfectcupcoffee@gmail.com</p></a>
-        </div>
-
-        <div class="box">
-            <a href="/"> <i class="fab fa-facebook-f"></i><p class="hvr-bounce-in">facebook</p>  </a>
-            <a href="/"> <i class="fab fa-twitter"></i><p class="hvr-bounce-in">twitter</p>  </a>
-            <a href="https://github.com/MChambersIV/Perfect-Cup"> <i class="fab fa-github"></i> <p class="hvr-bounce-in">GitHub</p> </a>
-            <a href="/"> <i class="fab fa-instagram"></i> <p class="hvr-bounce-in">instagram</p> </a>
-            <a href="/"> <i class="fab fa-linkedin"></i><p class="hvr-bounce-in">linkedin</p>  </a>
-        </div>
-
-        </div>
         </section>
     </div>
 
 
 <!-- Render script for logged in users only -->
-{{#if loggedIn}}
+{{#if logged_in}}
 <script src="/js/logout.js"></script>
 {{/if}}
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </html>
