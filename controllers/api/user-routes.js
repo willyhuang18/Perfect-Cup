@@ -57,11 +57,15 @@ router.put("/:d", async(req, res) => {
 //CREATE a new user
 router.post("/", async (req, res) => {
     try {
-        console.log(`req.body.name = ${JSON.stringify(req.body.name)}`);
-        const userData = await User.create(req.body);
+
+        const userData = await User.create({
+            user_name: req.body.name,
+            user_email: req.body.email,
+            user_password: req.body.password
+        });
         // Store user data during session
         req.session.save(() => {
-            req.session.id = userData.id;
+            req.session.user_id = userData.user_id;
             req.session.logged_in = true;
             res.status(200).json(userData);
         });
@@ -88,11 +92,10 @@ router.delete("/:id", async(req, res) => {
     }
 });
 
-// Log in for users
 router.post("/login", async (req, res) => {
     try {
         // Verify user
-        const userData = await User.findOne({ where: {email: req.body.email }});
+        const userData = await User.findOne({ where: {user_email: req.body.email }});
         if (!userData){
             res.status(400).json({ message: "Incorrect email or password, please try again"});
             return;
@@ -104,7 +107,7 @@ router.post("/login", async (req, res) => {
             return;
         }
         req.session.save(() => {
-            req.session.id = userData.id;
+            req.session.user_id = userData.user_id;
             req.session.logged_in = true;
             res.json({ user: userData, message: "You are now logged in! "});
         });
