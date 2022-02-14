@@ -3,7 +3,29 @@ const { User, Coffee, Ingredient } = require('../models');
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const withAuth = require('../utils/auth');
+const res = require('express/lib/response');
 
+router.get('/', async (req, res) => {
+    try{
+        const coffeeData = await Coffee.findAll({
+            attributes: ['coffee_id'],
+            include: [
+                {
+                    model: Ingredient,
+                    attributes: ['ingredient_id', "ingredient_name", "ingredient_description"],
+                },
+                {
+                    model: User,
+                    attributes: ["user_name"]
+                },
+            ],
+        });
+        const coffee = coffeeData.map((coffee) => coffee.get({plain: true}));
+        res.render("dashboard", { coffee, logged_in: true});
+    } catch (err){
+        res.status(500).json(err);
+    }
+});
 //display Coffee in the dashboard
 router.get('/', withAuth, (req, res)=>{
     //checking 
@@ -12,17 +34,13 @@ router.get('/', withAuth, (req, res)=>{
     Coffee.findAll({
         where:{
             //using ID to indicate
-            user_id:req.session.user_id
+            user_id: req.session.user_id
         },
         attributes: ['coffee_id'],
         include: [
             {
-                model:Ingredient,
-                attributes: ['ingredient_id', 'ingredient_description', 'user_id'],
-                include :{
-                    model: User,
-                    attributes: ['user_name']
-                }
+                model: Ingredient,
+                attributes: ['ingredient_id', 'ingredient_name', 'ingredient_description'],
             },
             {
                 model: User,
@@ -32,9 +50,9 @@ router.get('/', withAuth, (req, res)=>{
     })
     .then(response => {
         //serialize data
-        const userCoffee = response.map(coffee => coffee.get({plain: true}));
+        const coffee = response.map((coffee) => coffee.get({plain: true}));
         //pass that into homepage
-        res.render('dashboard', {userCoffee, loggedIn: true})
+        res.render('dashboard', { coffee, logged_in: true})
     })
     .catch(err => {
         console.log(err);
@@ -50,11 +68,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         include: [
             {
                 model: Ingredient,
-                attributes: ['ingredient_id', 'ingredient_description', 'user_id',],
-                include :{
-                    model: User,
-                    attributes: ['user_name']
-                }
+                attributes: ['ingredient_id', 'ingredient_name', 'ingredient_description'],
             },
             {
                 model: User,
@@ -63,9 +77,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
         ]
     })
     .then(response => {
-        const userCoffee = response.get({plain: true});
+        const coffee = response.get({plain: true});
         //pass that into homepage
-        res.render('edit-posts', {userCoffee, loggedIn: true})
+        res.render('edit-posts', {coffee, logged_in: true})
     })
     .catch(err => {
         console.log(err);
@@ -81,11 +95,7 @@ router.get('/new-coffee', withAuth, (req, res) => {
         include: [
             {
                 model: Ingredient,
-                attributes: ['ingredient_id', 'ingredient_description', 'user_id'],
-                include :{
-                    model: User,
-                    attributes: ['user_name']
-                }
+                attributes: ['ingredient_id', 'ingredient_name', 'ingredient_description'],
             },
             {
                 model: User,
@@ -94,9 +104,9 @@ router.get('/new-coffee', withAuth, (req, res) => {
         ]
     })
     .then(response => {
-        const userCoffee = response.map(coffee => coffee.get({plain: true}));
+        const coffee = response.map(coffee => coffee.get({plain: true}));
         //pass that into homepage
-        res.render('new-coffee', {userCoffee, loggedIn: true})
+        res.render('new-coffee', {coffee, logged_in: true})
     })
     .catch(err => {
         console.log(err);
@@ -104,5 +114,5 @@ router.get('/new-coffee', withAuth, (req, res) => {
       });
   });
 
-  module.exports= router;
-  //add
+  module.exports = router;
+  
