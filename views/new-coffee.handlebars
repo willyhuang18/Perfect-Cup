@@ -23,6 +23,9 @@
       <div class="sel sel--black-panther ">
         <select name="select-profession" type="checkbox" class="slides" id="select-profession">
           <option value="" disabled>Bean</option>
+          {{#each coffee as |ingredient|}}
+          <option value='{{ingredient.ingredient_name}}'>{{ingredient.ingredient_name}}</option>
+          {{/each}}
           {{!-- <option value="hacker">Hacker</option>
           <option value="gamer">Gamer</option>
           <option value="developer">Developer</option>
