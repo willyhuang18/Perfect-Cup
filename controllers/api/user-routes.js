@@ -57,7 +57,7 @@ router.put("/:d", async(req, res) => {
 //CREATE a new user
 router.post("/", async (req, res) => {
     try {
-        console.log(`req.body.name = ${JSON.stringify(req.body.name)}`);
+
         const userData = await User.create({
             user_name: req.body.name,
             user_email: req.body.email,
