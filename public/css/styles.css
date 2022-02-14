@@ -16,7 +16,7 @@
 
 #main {
     height: 900px;
-    background-image:url('./img/about.png');  
+    background-image:url('../img/about.png');  
     background-size: contain;
   }
   .start{
@@ -104,7 +104,7 @@ a:hover .liquid{
 .home{
   min-height: 70vh;
   padding-top: 12rem;
-  background: url('./img/bg.jpg') no-repeat;
+  background: url('../img/bg.jpg') no-repeat;
   background-position: center;
   background-size: cover;
   
@@ -164,12 +164,12 @@ section{
 }
 
 .main{
-  background: url('./img/bg2.jpg');
+  background: url('../img/bg2.jpg');
   background-size: cover;
 }
 
 .book{
-  background:url('./img/loginbg.jpg');
+  background:url('../img/loginbg.jpg');
   background-position: center;
   background-size: cover;
 }
