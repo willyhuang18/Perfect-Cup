@@ -14,10 +14,9 @@
   box-sizing: border-box;
 }
 
-
 #main {
     height: 900px;
-    background-image:url('../img/about.png');  
+    background-image:url('./img/about.png');  
     background-size: contain;
   }
   .start{
@@ -103,7 +102,7 @@ a:hover .liquid{
 }
 
 .home{
-  min-height: 100vh;
+  min-height: 80vh;
   padding-top: 12rem;
   background: url('./img/bg.jpg') no-repeat;
   background-position: center;
@@ -150,6 +149,7 @@ a:hover .liquid{
 
 .home .image-slider{
   text-align: center;
+  margin-top: 50px;
 }
 
 .home .image-slider a{
@@ -314,165 +314,207 @@ section{
   
 }
 
-.drop li a {text-decoration : none; color : #2d2f31;}
-
-.drop ul{
-  list-style:circle;
-}
-.drop {
-  width : 300px; 
-  background: #d9d9d9;
-  margin : 40px auto; 
-}
-
-.drop label {
-  padding : 15px;
-  background : #2d2f31; 
-  color : white;
-  font-size : 1.2em;
-  font-variant : small-caps;
-  cursor : pointer;
-  display: block;
-}
-
-.drop label::after {
-  float: right;
-  right: 10%;
-  content: " ";
-}
-
-.slides {
-  clear:both;
-  width:100%;
-  height:0px;
-  overflow: hidden;
-  text-align: center;
-  transition: height .4s ease;
-}
-.drop input{
-  display: none;
-}
-
-.drop li:hover {background-color: rgba(95, 85, 77, 0.897);}
-
-
-#touch {position: absolute; opacity: 0; height: 0px;}    
-
-#bean:checked + .slides {height: 300px;} 
-
-#roast:checked + .slides {height: 300px;} 
-
-#sweet:checked + .slides {height: 300px;} 
 
 .card{
   width: 500px;
 }
 
-.card__link::after {
-  position: absolute;
-  top: 25px;
-  left: 0;
-  content: "";
-  width: 0%;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.6);
-  transition: all 0.5s;
-}
-.card__link:hover::after {
-  width: 100%;
+
+
+ .container .card {
+  max-width: 300px;
+  height: 215px;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out
 }
 
-h5
- {
-   margin:0px;
-   font-size:1.4em;
-   font-weight:700;
- }
-
-p {
-   font-size:12px;
- }
-.centers{
-  display: table-cell;
-  flex-wrap: nowrap;
+.container .card:hover {
+  height: 450px
 }
 
-.section{
-  display: inline;
-}
- 
-   
-.property-card  {
-  height:18em;
-  width:20em;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  position:relative;   
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  border-radius:16px;
-  overflow:hidden;
-  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
-  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+.container .card .imgContainer {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  top: -50px;
+  left: 10px;
+  z-index: 1;
+  content: url('https://media1.giphy.com/media/l41lRi0VWdnH90yJy/giphy.gif');
   
-  
-}
-      
-.property-image{
-  height:6em;
-  width:20em;
-  padding:1em 2em;
-  position:Absolute;
-  top:0px;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
-  background-size:cover;
-  background-repeat:no-repeat;
-}
-      
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2)
 
-.property-description{
-  background-color: #FAFAFC;
-  height:12em;
-  width:20em;
-  position:absolute;
-  bottom:0em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  padding: 0.5em 1em;
-  text-align:center;
-}
-      
-
-.property-social-icons{
-  width:1em;
-  height:1em;
-  position:absolute;
-  bottom:1em;
-  left:1em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-       
-      
-      
-.property-card:hover .property-description{
-  height:0em;
-  padding:0px 1em;
 }
 
-.property-card:hover .property-image{height:18em;}
-    
 
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-in-out
+}
+
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s
+}
+
+@media (max-width: 330px) {
+  .container .card .imgContainer {
+      left: -2px
+  }
+}
       
 .updateForm,
 .commentForm label{
   font-size: 2.2rem;
   color:var(--main-color);
   line-height: 1.8;
+}
+
+
+
+.sel {
+  font-size: 1rem;
+  display: inline-block;
+  margin: 3em 2em;
+  width: 350px;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.sel::before {
+  position: absolute;
+  content: '';
+  font-family: 'FontAwesome';
+  font-size: 2em;
+  color: #FFF;
+  right: 20px;
+  top: calc(50% - 0.5em);
+}
+
+.sel.active::before {
+  transform: rotateX(-180deg);
+}
+
+.sel__placeholder {
+  display: block;
+  font-family: 'Quicksand';
+  font-size: 2.3em;
+  color: #838e95;
+  padding: 0.2em 0.5em;
+  text-align: left;
+  pointer-events: none;
+  user-select: none;
+  visibility: visible;
+}
+
+.sel.active .sel__placeholder {
+  visibility: hidden;
+}
+
+.sel__placeholder::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.2em 0.5em;
+  content: attr(data-placeholder);
+  visibility: hidden;
+}
+
+.sel.active .sel__placeholder::before {
+  visibility: visible;
+}
+
+.sel__box {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: -4px;
+  display: none;
+  list-style-type: none;
+  text-align: left;
+  font-size: 1em;
+  background-color: #FFF;
+  width: calc(100% + 8px);
+  box-sizing: border-box;
+}
+
+.sel.active .sel__box {
+  display: block;
+  animation: fadeInUp 500ms;
+}
+
+.sel__box__options {
+  display: list-item;
+  font-family: 'Quicksand';
+  font-size: 1.5em;
+  color: #838e95;
+  padding: 0.5em 1em;
+  user-select: none;
+}
+
+.sel__box__options::after {
+  content: '\f00c';
+  font-family: 'FontAwesome';
+  font-size: 0.5em;
+  margin-left: 5px;
+  display: none;
+}
+
+.sel__box__options.selected::after {
+  display: inline;
+}
+
+.sel__box__options:hover {
+  background-color: #ebedef;
+}
+
+/* ----- Select Box Black Panther ----- */
+.sel {
+  border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+}
+
+.sel--black-panther {
+  z-index: 3;
+}
+
+/* ----- Select Box Superman ----- */
+.sel--superman {
+/*   display: none; */
+  z-index: 2;
+}
+
+/* ===== Keyframes ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
