@@ -380,8 +380,6 @@ section{
   line-height: 1.8;
 }
 
-
-
 .sel {
   font-size: 1rem;
   display: inline-block;
@@ -390,7 +388,6 @@ section{
   background-color: transparent;
   position: relative;
   cursor: pointer;
-
 }
 
 .sel::before {
