@@ -9,7 +9,7 @@ router.get("/", withAuth, async (req, res) => {
             include: [
                 {
                     model: Coffee,
-                    attibutes: ["id", "title"]
+                    attibutes: ["coffee_id"]
                 } 
             ],
         });
@@ -23,8 +23,8 @@ router.get("/", withAuth, async (req, res) => {
 router.post("/", async(req, res) => {
     try{
         const ingredientData = await Ingredient.create({
-            ingredient_text: req.body.ingredient_text,
-            coffee_id: req.body.coffee_id,
+            ingredient_name: req.body.ingredient_name,
+            ingredient_description: req.body.ingredient_description,
         });
         res.status(200).json(ingredientData);
     } catch (err){
@@ -35,7 +35,7 @@ router.post("/", async(req, res) => {
 router.put("/:id", async(req, res) => {
     Ingredient.update(req.body, {
         where: {
-            id: req.params.id
+            ingredient_id: req.params.id
         },
     }).then(ingredientData => {
         if(!ingredientData){
@@ -54,7 +54,7 @@ router.delete("/:id", async(req, res) => {
     try{
         const ingredientData = await Ingredient.destroy({
             where:{
-                id: req.params.id
+                ingredient_id: req.params.id
             }
         });
         if (!ingredientData) {

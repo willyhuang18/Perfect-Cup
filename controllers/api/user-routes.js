@@ -21,7 +21,7 @@ router.get("/:id", async(req, res) => {
         include: [
             {
                 model: Coffee,
-                attributes: ["coffee_id", "coffee_name", "coffee_bean", "coffee_roast", "coffee_sweetener" ]
+                attributes: ["coffee_id" ]
             }
         ]
     }).then(userData => {
