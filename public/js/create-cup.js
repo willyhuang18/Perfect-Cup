@@ -1,30 +1,3 @@
-//create new post function
-async function newPostHandler(event) {
-  event.preventDefault();
-
-  const bean = document.querySelector('.bean').value.trim();
-  console.log(bean);
-  if(bean){
-      const response = await fetch(`/api/posts`, {
-          method: 'POST',
-          body: JSON.stringify({
-          bean
-          }),
-          headers: {
-          'Content-Type': 'application/json'
-          }
-      });
-
-      if (response.ok) {
-          document.location.replace('/dashboard/');
-      } else {
-          alert(response.statusText);
-      }
-  }
-}
-
-document.querySelector('.newPostForm').addEventListener('submit', newPostHandler);
-
 $('.sel').each(function() {
   $(this).children('select').css('display', 'none');
   
@@ -70,3 +43,31 @@ $('.sel__box__options').click(function() {
   $currentSel.children('.sel__placeholder').text(txt);
   $currentSel.children('select').prop('selectedIndex', index + 1);
 });
+
+//create new post function
+async function newPostHandler(event) {
+  event.preventDefault();
+
+  const bean = document.querySelector('.bean').value.trim();
+  console.log(bean);
+  if(bean){
+      const response = await fetch(`/api/posts`, {
+          method: 'POST',
+          body: JSON.stringify({
+          bean
+          }),
+          headers: {
+          'Content-Type': 'application/json'
+          }
+      });
+
+      if (response.ok) {
+          document.location.replace('/dashboard/');
+      } else {
+          alert(response.statusText);
+      }
+  }
+}
+
+document.querySelector('.newPostForm').addEventListener('submit', newPostHandler);
+
