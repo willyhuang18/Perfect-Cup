@@ -7,22 +7,6 @@ router.get("/", async (req, res) => {
     try {
         const beanData = await Bean.findAll({
             attributes: ["bean_id", "bean_name", "bean_description", "bean_origin"],
-            include: [
-                /*
-                {
-                    model: User,
-                    attributes: ["user_name"],
-                },
-                {
-                    model: Coffee,
-                    attributes: ["coffee_id", "coffee_name", "coffee_roast", "coffee_sweetener"],
-                    include: {
-                        model: User,
-                        attributes: ["user_name"]
-                    }
-                },
-                */
-            ],
         });
         res.status(200).json(beanData);
     } catch (err){
@@ -35,22 +19,6 @@ router.get("/:id", async (req, res) => {
     try {
         const beanData = await Bean.findOne({
             attributes: ["bean_id", "bean_name", "bean_description", "bean_origin"],
-            include: [
-                /*
-                {
-                    model: User,
-                    attributes: ["user_name"],
-                },
-                {
-                    model: Coffee,
-                    attributes: ["coffee_id", "coffee_name", "coffee_roast", "coffee_sweetener"],
-                    include: {
-                        model: User,
-                        attributes: ["user_name"]
-                    }
-                },
-                */
-            ],
         });
         res.status(200).json(beanDate);
     } catch (err) {
