@@ -55,7 +55,7 @@ async function newPostHandler(event) {
       const response = await fetch(`/api/posts`, {
           method: 'POST',
           body: JSON.stringify({
-          bean
+          value
           }),
           headers: {
           'Content-Type': 'application/json'

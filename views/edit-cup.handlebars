@@ -5,23 +5,67 @@
        <h1 class="heading"> Coffee <span>Edit Cup:</span></h1>
     
     <section class="book">
-    <form class="updateForm">
-        <label for="post-title">New cup:</label>
-        <input id="updateTitle" type="text" placeholder="your title" class="box" value="{{title}}">
-        <label for="post-content">New cup ingredient:</label>
-        <textarea id="updateText" class="form-control box"type="text" placeholder="your content">{{text}}</textarea>
-        
+   
+    <div class="container container-fluid align-center">
+      <div class="row mt-4">
+          <div class="d-flex justify-content-center">
+            <div class="cup "></div>
+          </div>
+          <div class="d-flex  justify-content-center">
+          <div class="newCup "> 
+            <form class="form newPostForm">
+            <div class="sel sel--black-panther ">
+              <select name="select-profession" type="checkbox" class="slides" id="select-profession">
+                <option value="" disabled>Bean</option>
+                <option value="hacker">Blue Mountain</option>
+                <option value="gamer">Caturra</option>
+                <option value="developer">Kona</option>
+                <option value="programmer">Pacamara</option>
+                <option value="designer">Sumatra</option> 
+              </select>
+              </div>
+                <div class="sel sel--black-panther ">
+              <select name="select-profession" type="checkbox" class="slides  blogContent" id="select-profession">
+                <option value="" disabled>Roast</option>
+                <option  value="gamer">Light Roast</option>
+                <option value="gamer">Cinnamon Roast</option>
+                <option value="developer">Medium Roast</option>
+                <option value="programmer">High Roast</option>
+                <option value="designer">Full City Roast</option> 
+                <option value="designer">French Roast</option> 
 
-        <input type="submit" value="Save Post" class="signUpBtn">
-        <input type="submit" value="Delete Post" class="signUpBtn deletePost">
-    </form>
+              </select>
+              </div>
+              
+                <div class="sel sel--black-panther ">
+                <select name="select-profession" type="checkbox" class="slides" id="select-profession">
+                <option value="" disabled>Sweetness</option>
+                <option value="hacker">Sugar</option>
+                <option value="gamer">Stevia</option>
+                <option value="developer">Brown Sugar</option>
+                <option value="programmer">Honey</option>
+                <option value="designer">Maple Syrup</option>
+              </select>
+              </div>
+            </div>
+          </div>
+        <div class="d-flex mb-3 px-3 justify-content-center">
+            <a  type="submit" class=" btn  active  m-1 text-light" style="background: #375d6f;"><span> Save </span>
+              <div class="liquid"></div>
+            </a>
+            <a  class=" btn  active  m-1 text-light deletePost" style="background: #375d6f;"><span> delete </span>
+              <div class="liquid"></div>
+            </a>
+          </div>
+      </div> 
+      </form>
 
     </section>
 
     <section class="book">
     <form class="commentForm">
         <label for="post-content">Comment</label>
-        <textarea id="updateText" class="form-control box "type="text" placeholder="your comment" id="commentText"></textarea>
+        <textarea id="commentText" class="form-control box "type="text" placeholder="your comment" id="commentText"></textarea>
     
         <input type="submit" value="Add Comment" class="signUpBtn">
     </form>
@@ -30,8 +74,6 @@
 </article>
 
 
-{{> comments post.comments}}
-
-<script src="/js/comment.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/js/updatepost.js"></script>
 <script src="/js/deletepost.js"></script>
