@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Coffee} = require("../../models");
+const { User, Coffee, CoffeeIngredient} = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET all coffee
@@ -42,9 +42,17 @@ router.get("/:id", async (req, res) => {
 router.post("/", async(req, res) => {
     try{
         const coffeeData = await Coffee.create({
-            coffee_name: req.body.coffee_name,
+            coffee_id: req.session.user_id,
             user_id: req.session.user_id,
         });
+        const ingredientData = await CoffeeIngredient.create({
+            where:{
+                ingredient_id : req.params.value1,
+                ingredient_id : req.params.value2,
+                ingredient_id : req.params.value3
+            }
+        })
+        res.status(200).json(ingredientData);
         res.status(200).json(coffeeData);
     } catch (err) {
         res.status(400).json(err);

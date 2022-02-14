@@ -48,14 +48,20 @@ $('.sel__box__options').click(function() {
 async function newPostHandler(event) {
   event.preventDefault();
 
-  const title = document.getElementById('select-profession');
-  const value = title.options[title.selectedIndex].value;
-  console.log(value);
+  const title1 = document.querySelector('.createCup');
+  const value1 = title1.options[title1.selectedIndex].value;
+  const title2 = document.querySelector('.roast');
+  const value2 = title2.options[title2.selectedIndex].value;
+  const title3 = document.querySelector('.sweet');
+  const value3 = title3.options[title3.selectedIndex].value;
+  // console.log(value);
 
-      const response = await fetch(`/api/posts`, {
+      const response = await fetch(`/api/coffee`, {
           method: 'POST',
           body: JSON.stringify({
-          value
+          value1,
+          value2,
+          value3
           }),
           headers: {
           'Content-Type': 'application/json'
@@ -63,7 +69,7 @@ async function newPostHandler(event) {
       });
 
       if (response.ok) {
-          document.location.replace('/dashboard/');
+          document.location.replace('/dashboard');
       } else {
           alert(response.statusText);
       }
