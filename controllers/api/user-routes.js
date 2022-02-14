@@ -65,7 +65,7 @@ router.post("/", async (req, res) => {
         });
         // Store user data during session
         req.session.save(() => {
-            req.session.id = userData.id;
+            req.session.user_id = userData.user_id;
             req.session.logged_in = true;
             res.status(200).json(userData);
         });
@@ -107,7 +107,7 @@ router.post("/login", async (req, res) => {
             return;
         }
         req.session.save(() => {
-            req.session.user_email = userData.email;
+            req.session.user_id = userData.user_id;
             req.session.logged_in = true;
             res.json({ user: userData, message: "You are now logged in! "});
         });
