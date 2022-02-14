@@ -92,34 +92,6 @@ router.delete("/:id", async(req, res) => {
     }
 });
 
-// Log in for users
-/*router.post('/login', (req, res)=>{
-    User.findOne({
-        where:{
-            user_email:req.body.email
-        }
-    })
-    .then(response =>{
-        if(!response){
-            res.status(404).json({ message: 'Please enter valid user Email'});
-            return;
-        }
-        //verify user 
-        const valid = response.checkPassword(req.body.password);
-        if(!valid) {
-            res.status(400).json({message: 'Please Enter password again.'})
-            return;
-        }
-           //using session to save user data
-        req.session.save(() => {
-            req.session.email = response.email;
-            req.session.logged_in = true;
-
-            res.json({user: response, message: 'You had logged in!' });
-        })
-    })
-})
-*/
 router.post("/login", async (req, res) => {
     try {
         // Verify user
