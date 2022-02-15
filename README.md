@@ -30,6 +30,17 @@ Ingredient transparency is vital as health and wellness are more emphasised in t
 
 ## Getting Started
 
+Connect to the above Heroku deployed link. Click on the signin button and scroll to the middle of the application. 
+
+For a first time user, create a profile by completing the form with the user's name, email, and password. 
+
+For an existing user, enter the user's email and password. 
+
+Once the user's identity has been validated, the user will be able to log into the profile. 
+
+The user can use the drop-down ingredient menu to make ingredient selections to create a Perfect Cup
+
+Click on the "Create" button, a dashboard page will display the user's Perfect Cup with its associated ingredients and data. 
 
 
 ## User Stories
