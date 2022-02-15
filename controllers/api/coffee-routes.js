@@ -51,18 +51,17 @@ router.post("/", async(req, res) => {
         //     }
         // });
         const coffeeData = await Coffee.create({
-            coffee_id: req.session.coffee_id,
             user_id: req.session.user_id, 
         });
         const ingredientData = await CoffeeIngredient.bulkCreate(
         [{
-            coffee_id: req.session.coffee_id,
+            coffee_id: coffeeData.coffee_id,
             ingredient_id: req.body.value1,
         },{
-            coffee_id: req.session.coffee_id,
+            coffee_id: coffeeData.coffee_id,
             ingredient_id : req.body.value2,
         },{
-            coffee_id: req.session.coffee_id,
+            coffee_id: coffeeData.coffee_id,
             ingredient_id : req.body.value3,
         }])
         console.log(req.session);
