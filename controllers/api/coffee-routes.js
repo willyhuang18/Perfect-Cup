@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Coffee} = require("../../models");
+const { User, Coffee, CoffeeIngredient, Ingredient} = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET all coffee
@@ -11,6 +11,10 @@ router.get("/", async (req, res) => {
                 {
                     model: User,
                     attributes: ["user_name"],
+                },
+                {
+                    model: Ingredient,
+                    attributes: ['ingredient_id', 'ingredient_name', 'ingredient_description'],
                 },
             ],
         });
@@ -42,10 +46,21 @@ router.get("/:id", async (req, res) => {
 router.post("/", async(req, res) => {
     try{
         const coffeeData = await Coffee.create({
-            coffee_name: req.body.coffee_name,
-            user_id: req.session.user_id,
+            coffee_id: req.session.user_id,
+            user_id: req.session.user_id, q
         });
-        res.status(200).json(coffeeData);
+        const ingredientData = await CoffeeIngredient.bulkCreate(
+        [{
+            coffee_id:req.session.user_id,
+            ingredient_id : req.body.value1,
+        },{
+            coffee_id:req.session.user_id,
+            ingredient_id : req.body.value2,
+        },{
+            coffee_id:req.session.user_id,
+            ingredient_id : req.body.value3,
+        }])
+        res.status(200).json({coffeeData, ingredientData});
     } catch (err) {
         res.status(400).json(err);
     }

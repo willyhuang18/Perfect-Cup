@@ -19,7 +19,8 @@ router.get('/', async (req, res) => {
             ],
         });
         // Serialize data for template
-        const coffee = coffeeData.map((coffee) => coffee.get({ plain: true }));
+        const coffee = coffeeData.map((coffees) => coffees.get({ plain: true }));
+        console.log(coffee);
         // Pass serialized data and session flag into template
         res.render('homepage', {
             coffee,

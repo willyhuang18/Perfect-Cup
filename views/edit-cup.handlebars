@@ -17,34 +17,37 @@
             <div class="sel sel--black-panther ">
               <select name="select-profession" type="checkbox" class="slides" id="select-profession">
                 <option value="" disabled>Bean</option>
-                <option value="hacker">Blue Mountain</option>
+                {{#each coffee. as |ingredient|}}
+                <option value='{{ingredient.ingredient_name}}'>{{ingredient.ingredient_name}}</option>
+                {{/each}}
+                {{!-- <option value="hacker">Blue Mountain</option>
                 <option value="gamer">Caturra</option>
                 <option value="developer">Kona</option>
                 <option value="programmer">Pacamara</option>
-                <option value="designer">Sumatra</option> 
+                <option value="designer">Sumatra</option>  --}}
               </select>
               </div>
                 <div class="sel sel--black-panther ">
               <select name="select-profession" type="checkbox" class="slides  blogContent" id="select-profession">
                 <option value="" disabled>Roast</option>
-                <option  value="gamer">Light Roast</option>
+                {{!-- <option  value="gamer">Light Roast</option>
                 <option value="gamer">Cinnamon Roast</option>
                 <option value="developer">Medium Roast</option>
                 <option value="programmer">High Roast</option>
                 <option value="designer">Full City Roast</option> 
-                <option value="designer">French Roast</option> 
+                <option value="designer">French Roast</option>  --}}
 
               </select>
               </div>
               
                 <div class="sel sel--black-panther ">
                 <select name="select-profession" type="checkbox" class="slides" id="select-profession">
-                <option value="" disabled>Sweetness</option>
+                {{!-- <option value="" disabled>Sweetness</option>
                 <option value="hacker">Sugar</option>
                 <option value="gamer">Stevia</option>
                 <option value="developer">Brown Sugar</option>
                 <option value="programmer">Honey</option>
-                <option value="designer">Maple Syrup</option>
+                <option value="designer">Maple Syrup</option> --}}
               </select>
               </div>
             </div>
