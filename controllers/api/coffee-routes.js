@@ -45,22 +45,28 @@ router.get("/:id", async (req, res) => {
 // CREATE a coffee
 router.post("/", async(req, res) => {
     try{
+        // const userData = await User.findOne({
+        //     where:{
+        //         user_name: req.session.name
+        //     }
+        // });
         const coffeeData = await Coffee.create({
-            coffee_id: req.session.user_id,
-            user_id: req.session.user_id, q
+            coffee_id: req.session.coffee_id,
+            user_id: req.session.user_id, 
         });
         const ingredientData = await CoffeeIngredient.bulkCreate(
         [{
-            coffee_id:req.session.user_id,
-            ingredient_id : req.body.value1,
+            coffee_id: req.session.coffee_id,
+            ingredient_id: req.body.value1,
         },{
-            coffee_id:req.session.user_id,
+            coffee_id: req.session.coffee_id,
             ingredient_id : req.body.value2,
         },{
-            coffee_id:req.session.user_id,
+            coffee_id: req.session.coffee_id,
             ingredient_id : req.body.value3,
         }])
-        res.status(200).json({coffeeData, ingredientData});
+        console.log(req.session);
+        res.status(200).json({ coffeeData, ingredientData });
     } catch (err) {
         res.status(400).json(err);
     }
