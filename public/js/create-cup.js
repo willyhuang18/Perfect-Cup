@@ -1,3 +1,37 @@
+async function newPostHandler(event) {
+  event.preventDefault();
+
+  const title1 = document.querySelector('.createCup');
+  const value1 = title1.options[title1.selectedIndex].value;
+  const title2 = document.querySelector('.roast');
+  const value2 = title2.options[title2.selectedIndex].value;
+  const title3 = document.querySelector('.sweet');
+  const value3 = title3.options[title3.selectedIndex].value;
+  // console.log(value);
+
+      const response = await fetch(`/api/coffee`, {
+          method: 'POST',
+          body: JSON.stringify({
+          value1,
+          value2,
+          value3
+          }),
+          headers: {
+          'Content-Type': 'application/json'
+          }
+      });
+
+      if (response.ok) {
+          document.location.replace('/dashboard');
+      } else {
+          alert(response.statusText);
+      }
+      console.log('woow');
+
+}
+
+document.querySelector('.newPostForm').addEventListener('submit', newPostHandler);
+
 $('.sel').each(function() {
   $(this).children('select').css('display', 'none');
   
@@ -45,36 +79,4 @@ $('.sel__box__options').click(function() {
 });
 
 //create new post function
-async function newPostHandler(event) {
-  event.preventDefault();
-
-  const title1 = document.querySelector('.createCup');
-  const value1 = title1.options[title1.selectedIndex].value;
-  const title2 = document.querySelector('.roast');
-  const value2 = title2.options[title2.selectedIndex].value;
-  const title3 = document.querySelector('.sweet');
-  const value3 = title3.options[title3.selectedIndex].value;
-  // console.log(value);
-
-      const response = await fetch(`/api/coffee`, {
-          method: 'POST',
-          body: JSON.stringify({
-          value1,
-          value2,
-          value3
-          }),
-          headers: {
-          'Content-Type': 'application/json'
-          }
-      });
-
-      if (response.ok) {
-          document.location.replace('/dashboard');
-      } else {
-          alert(response.statusText);
-      }
-
-}
-
-document.querySelector('.newPostForm').addEventListener('submit', newPostHandler);
 
