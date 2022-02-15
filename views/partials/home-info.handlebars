@@ -1,8 +1,11 @@
 <div class="content">
-   <h2>{{coffee_name}}</h2>
-   <h1>{{user.coffee}}</h1>
-   {{format_date created_at}} 
-  {{#each coffee as |ingredient|}}
-    <h1 value='{{ingredient.ingredient_name}}'>{{ingredient.ingredient_name}}</h1>
+    <h1 class="heading p-3"><span>{{user.user_name}}</span></h1>
+   {{#each ingredients as |ingredient|}}
+   <div class="p-1">
+   <h1 value='{{ingredient.ingredient_id}}'> {{ingredient.ingredient_name}}</h1>
+   <p value='{{ingredient.ingredient_id}}'> {{ingredient.ingredient_description}}</p>
+   </div>
    {{/each}}
-</div>
+      <a href="/dashboard/edit/{{coffee_id}}" type="button" class=" btn p-1 text-light" style="background: #6f4937;"><span>edit</span>
+         <div class="liquid"></div>
+      </a>

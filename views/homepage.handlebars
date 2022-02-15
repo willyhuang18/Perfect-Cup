@@ -1,15 +1,11 @@
-{{#each userPost as |post|}}
-<div class="container flex section ">
-    <div class="row d-flex  justify-content-center centers">
-        <div class=" d-flex justify-content-center " >
-            <div class="property-card ">
-            {{> home-info post }}
-                <li><div class="property-image"></div></li>
-                </div>
-        </div>
+<div class=" row aligns-items-center ">
+    {{#each coffee as |cup|}}
+    <div class="col container d-flex position-relative flex-wrap">
+        <div class="card d-flex position-relative flex-column">
+            <div class='imgContainer'>  </div>
+            {{> home-info cup}}
+            </div>
+        </div>    
     </div>
-    </div>
-</section>
-{{else}}
-<h6 class="text-center fw-bold fs-1">Please Make Your Cup</h6>
-{{/each}}
+    {{/each}}
+</div>

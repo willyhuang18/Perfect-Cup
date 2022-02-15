@@ -26,7 +26,6 @@ async function newPostHandler(event) {
       } else {
           alert(response.statusText);
       }
-      console.log('woow');
 
 }
 
