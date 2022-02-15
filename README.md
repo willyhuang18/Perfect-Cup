@@ -7,8 +7,8 @@ Ingredient transparency is vital as health and wellness are more emphasized in t
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Bootstrap] (https://getbootstrap.com/)
-* [Hover.css] (https://ianlunn.github.io/Hover/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Hover.css](https://ianlunn.github.io/Hover/)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Node.js](https://nodejs.org/en/)
 * [Express](https://expressjs.com)
@@ -24,7 +24,7 @@ Ingredient transparency is vital as health and wellness are more emphasized in t
 
 ## Deployed Link
 
-* [Deployed Link to Heroku](https://shielded-harbor-19029.herokuapp.com/)
+* [Deployed Link to Heroku](https://powerful-wildwood-54385.herokuapp.com/)
 * [Link to Github](https://github.com/MChambersIV/Perfect-Cup)
 
 
@@ -69,7 +69,13 @@ As a user, I want to be able to see all data related to my Perfect Cup
 
 ## Design Layout
 
-![alt text](#)
+![image](https://user-images.githubusercontent.com/87446864/154159013-bbf9e9b8-d636-4661-b9a3-bd6a4e8b1983.png)
+
+![image](https://user-images.githubusercontent.com/87446864/154159052-5eb98c61-4b22-4395-b0dd-500ffb90a0fe.png)
+
+![image](https://user-images.githubusercontent.com/87446864/154159081-afe646af-07f7-4a45-b24f-4dd296060fba.png)
+
+![image](https://user-images.githubusercontent.com/87446864/154158912-30a6d51a-5c5d-4450-b38e-ded79a643f4f.png)
 
 
 ## Authors
@@ -83,7 +89,7 @@ As a user, I want to be able to see all data related to my Perfect Cup
 * **Panta Huang** 
 - [Portfolio](#)
 - [Github](https://github.com/willyhuang18)
-- [LinkedIn](#)
+- [LinkedIn](https://www.linkedin.com/feed/)
 
 * **Mandy Tsang** 
 - [Portfolio](https://mandytsang007.github.io/Mandy-Portfolio/)
