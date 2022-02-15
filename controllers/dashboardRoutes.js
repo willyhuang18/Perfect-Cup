@@ -89,24 +89,25 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
 // rendering newCoffee page 
 router.get('/new-coffee', withAuth, (req, res) => {
-    Coffee.findAll({
-        where: { user_id: req.session.user_id},
-        attributes: ['coffee_id'],
-        include: [
-            {
-                model: Ingredient,
-                attributes: ['ingredient_id', 'ingredient_name', 'ingredient_description'],
-            },
-            {
-                model: User,
-                attributes: ['user_name']
-            },
-        ]
+    Ingredient.findAll({
+        // where: { user_id: req.session.user_id},
+        // attributes: ['coffee_id'],
+        // include: [
+        //     {
+        //         model: Ingredient,
+        //         attributes: ['ingredient_id', 'ingredient_name', 'ingredient_description'],
+        //     },
+        //     {
+        //         model: User,
+        //         attributes: ['user_name']
+        //     },
+        // ]
     })
     .then(response => {
-        const coffee = response.map(coffee => coffee.get({plain: true}));
+        const ingredients = response.map(ingredient => ingredient.get({plain: true}));
+        console.log(ingredients);
         //pass that into homepage
-        res.render('new-coffee', {coffee, logged_in: true})
+        res.render('new-coffee', {ingredients, logged_in: true})
     })
     .catch(err => {
         console.log(err);
