@@ -21,20 +21,19 @@
     
 {{#if coffee.length}}
     </div>
-    {{#each userPost as |post|}}
-    <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
+<div class=" row aligns-items-center ">
+    {{#each coffee as |cup|}}
+    <div class="col container d-flex position-relative flex-wrap">
         <div class="card d-flex position-relative flex-column">
             <div class='imgContainer'>  </div>
-            {{> post-info post}}
+            {{> cup-info cup}}
             </div>
-            <a href="/dashboard/edit/{{post.id}}" type="button" class=" btn p-1 text-light" style="background: #6f4937;"><span>edit</span>
-                    <div class="liquid"></div>
-            </a>
+           
         </div>    
     </div>
     
     {{/each}}
-
+</div>
 {{else}}
 <h6 class="text-center fw-bold fs-1">Please Make Your Perfect Cup </h6>
 
