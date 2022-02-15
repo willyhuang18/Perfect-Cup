@@ -1,39 +1,3 @@
-async function newPostHandler(event) {
-  event.preventDefault();
-
-  const title1 = document.querySelector('.createCup');
-  const value1 = title1.options[title1.selectedIndex].value;
-  const title2 = document.querySelector('.roast');
-  const value2 = title2.options[title2.selectedIndex].value;
-  const title3 = document.querySelector('.sweet');
-  const value3 = title3.options[title3.selectedIndex].value;
-  const id = window.location.toString().split('/')[
-    window.location.toString().split('/').length - 1
-  ];
-  // console.log(value);
-
-      const response = await fetch(`/api/coffee/${id}`, {
-          method: 'PUT',
-          body: JSON.stringify({
-          value1,
-          value2,
-          value3
-          }),
-          headers: {
-          'Content-Type': 'application/json'
-          }
-      });
-
-      if (response.ok) {
-          document.location.replace('/dashboard');
-      } else {
-          alert(response.statusText);
-      }
-
-}
-
-document.querySelector('.updateForm').addEventListener('submit', newPostHandler);
-
 $('.sel').each(function() {
   $(this).children('select').css('display', 'none');
   
@@ -79,6 +43,43 @@ $('.sel__box__options').click(function() {
   $currentSel.children('.sel__placeholder').text(txt);
   $currentSel.children('select').prop('selectedIndex', index + 1);
 });
+
+async function newPostHandler(event) {
+  event.preventDefault();
+
+  const title1 = document.querySelector('.createCup');
+  const value1 = title1.options[title1.selectedIndex].value;
+  const title2 = document.querySelector('.roast');
+  const value2 = title2.options[title2.selectedIndex].value;
+  const title3 = document.querySelector('.sweet');
+  const value3 = title3.options[title3.selectedIndex].value;
+  const id = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+  ];
+  // console.log(value);
+
+      const response = await fetch(`/api/coffee/${id}`, {
+          method: 'PUT',
+          body: JSON.stringify({
+          value1,
+          value2,
+          value3
+          }),
+          headers: {
+          'Content-Type': 'application/json'
+          }
+      });
+
+      if (response.ok) {
+          document.location.replace('/dashboard');
+      } else {
+          alert(response.statusText);
+      }
+
+}
+
+document.querySelector('.updateForm').addEventListener('submit', newPostHandler);
+
 
 //create new post function
 
