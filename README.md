@@ -1,22 +1,24 @@
 # Perfect Cup
 
-In today’s society, it’s hard to see a coffee shop that promotes its shade-grown or organic products. In order to promote ingredient transparency, this application provides all of our coffee ingredients to keep our customers informed when they place an order of their Perfect Cup. In the meantime, customers are able to create their Perfect Cup of coffee from a variety of flavors and ingredients. This application has a social share buttons that give customers the ability to share their purchase experience on this app. 
+Ingredient transparency is vital as health and wellness are more emphasised in today's society. Perfect Cup provides an informative platform for coffee lovers to create their own Perfect Cup while keeping them informed about variety of coffee ingredients.
 
 
 ## Technologies Used
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Bootstrap] (https://getbootstrap.com/)
+* [Hover.css] (https://ianlunn.github.io/Hover/)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Node.js](https://nodejs.org/en/)
 * [Express](https://expressjs.com)
-* [MySQL](https://www.mysql.com)
+* [Express-session](https://www.npmjs.com/package/express-session)
 * [Express-handlebars](https://www.npmjs.com/package/express-handlebars)
+* [MySQL](https://www.mysql.com)
 * [Sequelize](https://www.npmjs.com/package/sequelize)
+* [Connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
 * [Dotenv](https://www.npmjs.com/package/dotenv)
 * [Bcrypt](https://www.npmjs.com/package/bcrypt)
-* [Express-session](https://www.npmjs.com/package/express-session)
-* [Connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
 * [Heroku](https://www.heroku.com)
 
 

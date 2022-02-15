@@ -12,21 +12,21 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
- const hbs = exphbs.create({ auth });
+const hbs = exphbs.create({ auth });
 
- const sess = {
-     secret: '69393absbshWHHHRshfd58cn0934d',
-     cookie: {},
-     resave: true,
-     saveUninitialized: true,
-     store: new SequelizeStore({
-         db: sequelize
-     })
- };
+const sess = {
+    secret: '69393absbshWHHHRshfd58cn0934d',
+    cookie: {},
+    resave: true,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize
+    })
+};
 
- app.use(session(sess));
+app.use(session(sess));
 
- app.engine('handlebars', hbs.engine);
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());

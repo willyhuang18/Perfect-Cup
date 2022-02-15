@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
         res.status(500).json(err);
     }
 });
-//
+
 // GET a single coffee
 router.get("/:id", async (req, res) => {
     try {
