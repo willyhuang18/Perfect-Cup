@@ -1,22 +1,24 @@
 # Perfect Cup
 
-In today’s society, it’s hard to see a coffee shop that promotes its shade-grown or organic products. In order to promote ingredient transparency, this application provides all of our coffee ingredients to keep our customers informed when they place an order of their Perfect Cup. In the meantime, customers are able to create their Perfect Cup of coffee from a variety of flavors and ingredients. This application has a social share buttons that give customers the ability to share their purchase experience on this app. 
+Ingredient transparency is vital as health and wellness are more emphasized in today's society. Perfect Cup provides an informative platform for coffee lovers to create their own Perfect Cup while keeping them informed about the origin of a variety of coffee ingredients.
 
 
 ## Technologies Used
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Bootstrap] (https://getbootstrap.com/)
+* [Hover.css] (https://ianlunn.github.io/Hover/)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Node.js](https://nodejs.org/en/)
 * [Express](https://expressjs.com)
-* [MySQL](https://www.mysql.com)
+* [Express-session](https://www.npmjs.com/package/express-session)
 * [Express-handlebars](https://www.npmjs.com/package/express-handlebars)
+* [MySQL](https://www.mysql.com)
 * [Sequelize](https://www.npmjs.com/package/sequelize)
+* [Connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
 * [Dotenv](https://www.npmjs.com/package/dotenv)
 * [Bcrypt](https://www.npmjs.com/package/bcrypt)
-* [Express-session](https://www.npmjs.com/package/express-session)
-* [Connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
 * [Heroku](https://www.heroku.com)
 
 
@@ -28,15 +30,28 @@ In today’s society, it’s hard to see a coffee shop that promotes its shade-g
 
 ## Getting Started
 
+Connect to the above Heroku deployed link. Click on the signin button and scroll to the middle of the application. 
+
+For a first time user, create a profile by completing the form with the user's name, email, and password. 
+
+For an existing user, enter the user's email and password. 
+
+Once the user's identity has been validated, the user will be able to log into the profile. 
+
+The user can use the drop-down ingredient menu to make ingredient selections to create a Perfect Cup
+
+Click on the "Create" button, a dashboard page will display the user's Perfect Cup with its associated ingredients and data. 
 
 
 ## User Stories
 
-As a user, I want to be able to input my information so that I can login or create a profile.
+As a user, I want to be presented with the option to sign in, sign up or proceed as a guest
 
-As a user, I want to be able to create my perfect cup of coffee with wide selection of beans, roasts, and sweeteners.
+As a user, I want to be able to save my login data in the server so that I can log back into my profile
 
-As a user, I want to see others coffee lovers' Perfect Cups.
+As a user, I want to be able to create my perfect cup of coffee with wide selection of ingredients and their associated data.
+
+As a user, I want to be able to see all data related to my Perfect Cup
 
 
 ## Acceptance Criteria
@@ -44,18 +59,17 @@ As a user, I want to see others coffee lovers' Perfect Cups.
 - [ ] Homepage has a login button and a signup button 
 - [ ] On login, display the login page that has a text input form for user's email and password entry
 - [ ] On login, compare the user's credential to each existing user array and find the user's profile
-- [ ] Display the user's profile in a dashboard page after login
+- [ ] Display the user's profile on the dashboard page after login
 - [ ] On signup, display a form for user to create a user's profile
-- [ ] Display the user's profile in a dashboard page
-- [ ] Dashboard page has drop-down menu for the user to create a Perfect Cup
-- [ ] Dashboard page has a display area for the Perfect Cup's ingredients and its associated data
-- [ ] Dashboard page has a display area other customers' Perfect Cups 
+- [ ] Display the user's profile on the dashboard page
+- [ ] Dashboard page has a drop-down menu for the user to create a Perfect Cup
+- [ ] Dashboard page displays the Perfect Cup's ingredients and its associated data
+- [ ] Dashboard page displays the user's Perfect Cups 
 
 
 ## Design Layout
 
 ![alt text](#)
-
 
 
 ## Authors

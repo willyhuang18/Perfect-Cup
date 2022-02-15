@@ -6,6 +6,7 @@ const CoffeeIngredient = require('./CoffeeIngredient');
 
 
 Coffee.belongsTo(User, { foreignKey: 'user_id' });
+User.hasMany(Coffee, { foreignKey: 'user_id' });
 
 Coffee.belongsToMany(Ingredient, {through: CoffeeIngredient, foreignKey: 'coffee_id'}); 
 

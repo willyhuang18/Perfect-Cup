@@ -87,7 +87,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
       });
 })
 
-// rendering newPost page 
+// rendering newCoffee page 
 router.get('/new-coffee', withAuth, (req, res) => {
     Ingredient.findAll({
         // where: { user_id: req.session.user_id},

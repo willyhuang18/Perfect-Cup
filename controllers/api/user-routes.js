@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Coffee } = require("../../models");
+const { User, Coffee, Ingredient } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET users (find all users)
@@ -21,7 +21,11 @@ router.get("/:id", async(req, res) => {
         include: [
             {
                 model: Coffee,
-                attributes: ["coffee_id" ]
+                attributes: ["coffee_id"],
+                include: [{
+                    model: Ingredient,
+                    attributes: ["ingredient_id", "ingredient_name", "ingredient_description"]
+                }]
             }
         ]
     }).then(userData => {
