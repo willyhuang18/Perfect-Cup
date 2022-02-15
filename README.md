@@ -34,11 +34,13 @@ Ingredient transparency is vital as health and wellness are more emphasised in t
 
 ## User Stories
 
-As a user, I want to be able to input my information so that I can login or create a profile.
+As a user, I want to be presented with the option to sign in, sign up or proceed as a guest
 
-As a user, I want to be able to create my perfect cup of coffee with wide selection of beans, roasts, and sweeteners.
+As a user, I want to be able to save my login data in the server so that I can log back into my profile
 
-As a user, I want to see others coffee lovers' Perfect Cups.
+As a user, I want to be able to create my perfect cup of coffee with wide selection of ingredients and their associated data.
+
+As a user, I want to be able to see all data related to my Perfect Cup
 
 
 ## Acceptance Criteria
@@ -57,7 +59,6 @@ As a user, I want to see others coffee lovers' Perfect Cups.
 ## Design Layout
 
 ![alt text](#)
-
 
 
 ## Authors
