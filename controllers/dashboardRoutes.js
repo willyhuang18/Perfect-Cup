@@ -63,7 +63,7 @@ router.get('/', withAuth, (req, res)=>{
 //render edit page
 router.get('/edit/:id', withAuth, (req, res) => {
     Coffee.findOne({
-        where: {coffee_id: req.params.coffee_id},
+        where: {coffee_id: req.params.id},
         attributes: ['coffee_id'],
         include: [
             {
@@ -77,9 +77,13 @@ router.get('/edit/:id', withAuth, (req, res) => {
         ]
     })
     .then(response => {
+        if (!response) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
         const coffee = response.get({plain: true});
         //pass that into homepage
-        res.render('edit-posts', {coffee, logged_in: true})
+        res.render('edit-coffee', {coffee, logged_in: true})
     })
     .catch(err => {
         console.log(err);
