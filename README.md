@@ -5,6 +5,7 @@ Ingredient transparency is vital as health and wellness are more emphasized in t
 ## Table of Contents
 * [Technologies Used](#technologies)
 * [Demo and Site Link](#demo)
+* [Preview](#preview)
 * [User Stories](#user)
 * [Authors](#authors)
 * [License](#license)
@@ -61,11 +62,11 @@ As a user, I want to be able to create my perfect cup of coffee with wide select
 As a user, I want to be able to see all data related to my Perfect Cup
 
 
-## Design Layout
-
-
-
+## Preview
 ![image](https://user-images.githubusercontent.com/87446864/154158912-30a6d51a-5c5d-4450-b38e-ded79a643f4f.png)
+![image](https://user-images.githubusercontent.com/87446864/172097031-ddc2db07-83c9-4b63-9fea-dba1b417859c.png)
+![image](https://user-images.githubusercontent.com/87446864/172097141-d7fba0ae-541b-426e-ab3d-d88165d81c49.png)
+![image](https://user-images.githubusercontent.com/87446864/172097221-5e55d965-e4e7-403d-aad7-cc1ccdec144e.png)
 
 
 ## Authors
