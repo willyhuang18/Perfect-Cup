@@ -1,6 +1,13 @@
-# Perfect Cup
+# Perfect Cup - [Live Site](https://powerful-wildwood-54385.herokuapp.com/)
 
 Ingredient transparency is vital as health and wellness are more emphasized in today's society. Perfect Cup provides an informative platform for coffee lovers to create their own Perfect Cup while keeping them informed about the origin of a variety of coffee ingredients.
+
+## Table of Contents
+* [Technologies Used](#technologiesused)
+* [Demo and Site Link](#demo)
+* [User Stories](#userstories)
+* [Authors](#authors)
+* [License](#license)
 
 
 ## Technologies Used
@@ -22,7 +29,7 @@ Ingredient transparency is vital as health and wellness are more emphasized in t
 * [Heroku](https://www.heroku.com)
 
 
-## Deployed Link
+## Demo
 
 * [Deployed Link to Heroku](https://powerful-wildwood-54385.herokuapp.com/)
 * [Link to Github](https://github.com/MChambersIV/Perfect-Cup)
@@ -52,19 +59,6 @@ As a user, I want to be able to save my login data in the server so that I can l
 As a user, I want to be able to create my perfect cup of coffee with wide selection of ingredients and their associated data.
 
 As a user, I want to be able to see all data related to my Perfect Cup
-
-
-## Acceptance Criteria
-
-- [ ] Homepage has a login button and a signup button 
-- [ ] On login, display the login page that has a text input form for user's email and password entry
-- [ ] On login, compare the user's credential to each existing user array and find the user's profile
-- [ ] Display the user's profile on the dashboard page after login
-- [ ] On signup, display a form for user to create a user's profile
-- [ ] Display the user's profile on the dashboard page
-- [ ] Dashboard page has a drop-down menu for the user to create a Perfect Cup
-- [ ] Dashboard page displays the Perfect Cup's ingredients and its associated data
-- [ ] Dashboard page displays the user's Perfect Cups 
 
 
 ## Design Layout
