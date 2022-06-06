@@ -3,14 +3,14 @@
 Ingredient transparency is vital as health and wellness are more emphasized in today's society. Perfect Cup provides an informative platform for coffee lovers to create their own Perfect Cup while keeping them informed about the origin of a variety of coffee ingredients.
 
 ## Table of Contents
-* [Technologies Used](#technologiesused)
+* [Technologies Used](#technologies)
 * [Demo and Site Link](#demo)
-* [User Stories](#userstories)
+* [User Stories](#user)
 * [Authors](#authors)
 * [License](#license)
 
 
-## Technologies Used
+## Technologies
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -50,7 +50,7 @@ The user can use the drop-down ingredient menu to make ingredient selections to 
 Click on the "Create" button, a dashboard page will display the user's Perfect Cup with its associated ingredients and data. 
 
 
-## User Stories
+## User
 
 As a user, I want to be presented with the option to sign in, sign up or proceed as a guest
 
@@ -63,11 +63,7 @@ As a user, I want to be able to see all data related to my Perfect Cup
 
 ## Design Layout
 
-![image](https://user-images.githubusercontent.com/87446864/154159013-bbf9e9b8-d636-4661-b9a3-bd6a4e8b1983.png)
 
-![image](https://user-images.githubusercontent.com/87446864/154159052-5eb98c61-4b22-4395-b0dd-500ffb90a0fe.png)
-
-![image](https://user-images.githubusercontent.com/87446864/154159081-afe646af-07f7-4a45-b24f-4dd296060fba.png)
 
 ![image](https://user-images.githubusercontent.com/87446864/154158912-30a6d51a-5c5d-4450-b38e-ded79a643f4f.png)
 
@@ -89,18 +85,6 @@ As a user, I want to be able to see all data related to my Perfect Cup
 - [Portfolio](https://mandytsang007.github.io/Mandy-Portfolio/)
 - [Github](https://github.com/MANDYTSANG007)
 - [LinkedIn](https://www.linkedin.com/in/man-tsang-64308b22a/)
-
-## Learning Objectives
-- Upon completion of this application, we acquired the ability to utilise Node.js and Express.js to create a RESTful API
-- We acquired the ability to use MySQL and the Sequelize ORM for the database
-- We created a folder structure that meets the MVC paradigm
-- We included authentication using express-session and cookies
-- We protected API keys and sensitive information with environment variables
-- We sucessfully resolve merge conflicts
-- We prepared a professional presentation and repository README.md
-- We learned about the workflow of git branching in a collaborative project
-- We designed, built, and deplolyed a full stack SQL backed application
-- We practiced Agile software Development
 
 
 ## License
